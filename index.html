@@ -8,40 +8,30 @@
   @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/static/pretendard.css');
 
   :root{
-    /* 배경/텍스트 기본 */
     --page-background: #f7efdc;
     --page-text: #1c1712;
     --card-background: #ffffff;
-
-    /* 히어로 뱃지 */
     --badge-background: #f2b705;
-
-    /* 일시/장소 카드의 라벨 태그 */
     --facts-tag-background: #5FBC8F;
 
-    /* 상단 메뉴 버튼 (부스 / 오시는길 / 배치도) */
     --menu-button-booth: #f3a7c2;
     --menu-button-directions: #f3a7c2;
     --menu-button-layout: #f3a7c2;
-
-    /* 하단 메뉴 버튼 (설문조사 / 카카오채널) */
     --menu-button-survey: #fee500;
     --menu-button-kakao: #fee500;
+    --menu-button-timeline: #f3a7c2;
+    --menu-button-event: #f3a7c2;
 
-    /* 본문 섹션 제목 밑줄, 강조 텍스트 */
     --section-accent: #e2532f;
     --section-accent-deep: #c73f20;
 
-    /* 푸터 */
     --footer-background: #1c1712;
     --footer-text: #f7efdc;
     --footer-accent: #f2b705;
   }
 
   *{ margin:0; padding:0; box-sizing:border-box; }
-
   html{ scroll-behavior: smooth; }
-
   body{
     background: var(--page-background);
     color: var(--page-text);
@@ -49,13 +39,7 @@
     overflow-x: hidden;
   }
 
-  /* 장식용 포스터 컷아웃 이미지 공통 */
-  .deco{
-    position: absolute;
-    pointer-events: none;
-    user-select: none;
-    z-index: 1;
-  }
+  .deco{ position: absolute; pointer-events: none; user-select: none; z-index: 1; }
 
   /* ---------- HERO ---------- */
   .hero{
@@ -66,284 +50,193 @@
     border-bottom: 4px solid var(--page-text);
     overflow: hidden;
   }
-
-  .hero .deco-pinkstar{
-    top: 6%;
-    right: 8%;
-    width: clamp(38px, 6vw, 64px);
-    transform: rotate(8deg);
-  }
-
-  .hero .deco-ministar{
-    top: 12%;
-    left: 6%;
-    width: clamp(34px, 5.5vw, 58px);
-    transform: rotate(-10deg);
-  }
-
-  .hero .deco-flower{
-    bottom: -6%;
-    left: 2%;
-    width: clamp(70px, 11vw, 130px);
-    transform: rotate(-6deg);
-    opacity: .92;
-  }
-
-  .hero .deco-coffeecup{
-    bottom: -2%;
-    right: 3%;
-    width: clamp(64px, 10vw, 116px);
-    transform: rotate(9deg);
-    opacity: .92;
-  }
-
-  .hero-content{
-    position: relative;
-    z-index: 2;
-  }
+  .hero .deco-pinkstar{ top:6%; right:8%; width:clamp(38px,6vw,64px); transform:rotate(8deg); }
+  .hero .deco-ministar{ top:12%; left:6%; width:clamp(34px,5.5vw,58px); transform:rotate(-10deg); }
+  .hero .deco-flower{ bottom:-6%; left:2%; width:clamp(70px,11vw,130px); transform:rotate(-6deg); opacity:.92; }
+  .hero .deco-coffeecup{ bottom:-2%; right:3%; width:clamp(64px,10vw,116px); transform:rotate(9deg); opacity:.92; }
+  .hero-content{ position:relative; z-index:2; }
 
   .badge{
-    display: inline-block;
-    background: var(--badge-background);
-    color: var(--page-text);
-    font-family: 'Pretendard', sans-serif;
-    font-weight: 800;
-    font-size: clamp(.85rem, 2vw, 1.05rem);
-    padding: .5rem 1.3rem;
-    border-radius: 999px;
-    border: 1px solid var(--page-text);
-    letter-spacing: .02em;
-    margin-bottom: 1.6rem;
+    display:inline-block; background:var(--badge-background); color:var(--page-text);
+    font-weight:800; font-size:clamp(.85rem,2vw,1.05rem); padding:.5rem 1.3rem;
+    border-radius:999px; border:1px solid var(--page-text); letter-spacing:.02em; margin-bottom:1.6rem;
   }
-
   h1{
-    font-family: 'Pretendard', sans-serif;
-    font-weight: 900;
-    font-size: clamp(2rem, 8.5vw, 4.6rem);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    color: var(--page-text);
-    white-space: nowrap;
+    font-weight:900; font-size:clamp(2rem,8.5vw,4.6rem); line-height:1.1;
+    letter-spacing:-0.02em; color:var(--page-text); white-space:nowrap;
   }
-
   .facts{
-    margin-top: 2.6rem;
-    display: inline-flex;
-    flex-direction: column;
-    gap: .55rem;
-    text-align: left;
-    background: var(--card-background);
-    border: 2px solid var(--page-text);
-    border-radius: 18px;
-    padding: 1.4rem 1.8rem;
+    margin-top:2.6rem; display:inline-flex; flex-direction:column; gap:.55rem; text-align:left;
+    background:var(--card-background); border:2px solid var(--page-text); border-radius:18px; padding:1.4rem 1.8rem;
   }
-
-  .facts .row{
-    display: flex;
-    gap: .9rem;
-    align-items: baseline;
-    font-size: clamp(.95rem, 2.4vw, 1.15rem);
-  }
-
+  .facts .row{ display:flex; gap:.9rem; align-items:baseline; font-size:clamp(.95rem,2.4vw,1.15rem); }
   .facts .tag{
-    flex: 0 0 auto;
-    background: var(--facts-tag-background);
-    color: #fff;
-    font-weight: 700;
-    font-size: .78em;
-    padding: .18rem .6rem;
-    border-radius: 6px;
+    flex:0 0 auto; background:var(--facts-tag-background); color:#fff; font-weight:700;
+    font-size:.78em; padding:.18rem .6rem; border-radius:6px;
   }
+  .facts .val{ font-weight:600; line-height:1.5; }
 
-  .facts .val{
-    font-weight: 600;
-    line-height: 1.5;
-  }
-
-  /* ---------- MENU BUTTONS ---------- */
-  .menu-wrap{
-    background: var(--page-background);
-    border-bottom: 4px solid var(--page-text);
-    padding: 1.8rem 6vw 2rem;
-  }
-
-  .menu-row{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: .7rem;
-  }
-
-  .menu-row + .menu-row{ margin-top: .7rem; }
-
+  /* ---------- MENU ---------- */
+  .menu-wrap{ background:var(--page-background); border-bottom:4px solid var(--page-text); padding:1.8rem 6vw 2rem; }
+  .menu-row{ display:flex; flex-wrap:wrap; justify-content:center; gap:.7rem; }
+  .menu-row + .menu-row{ margin-top:.7rem; }
   .menu-btn{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: .9rem 1.7rem;
-    border-radius: 999px;
-    border: 2.5px solid var(--page-text);
-    color: var(--page-text);
-    text-decoration: none;
-    font-weight: 800;
-    font-size: clamp(.85rem, 2.4vw, 1rem);
-    letter-spacing: .01em;
-    transition: transform .15s ease, opacity .15s ease;
+    display:inline-flex; align-items:center; justify-content:center; text-align:center;
+    padding:.9rem 1.7rem; border-radius:999px; border:2.5px solid var(--page-text);
+    color:var(--page-text); text-decoration:none; font-weight:800;
+    font-size:clamp(.85rem,2.4vw,1rem); letter-spacing:.01em; transition:transform .15s ease;
   }
+  .menu-btn:hover{ transform:translateY(-3px); }
+  .menu-btn:active{ transform:translateY(0); }
+  .menu-btn--booth{ background:var(--menu-button-booth); color:#fff; }
+  .menu-btn--timeline{ background:var(--menu-button-timeline); color:#fff; }
+  .menu-btn--event{ background:var(--menu-button-event); color:#fff; }
+  .menu-btn--directions{ background:var(--menu-button-directions); color:#fff; }
+  .menu-btn--layout{ background:var(--menu-button-layout); color:#fff; }
+  .menu-btn--survey{ background:var(--menu-button-survey); color:var(--page-text); }
+  .menu-btn--kakao{ background:var(--menu-button-kakao); color:var(--page-text); }
 
-  .menu-btn:hover{
-    transform: translateY(-3px);
-  }
-
-  .menu-btn:active{
-    transform: translateY(0);
-  }
-
-  .menu-btn--booth{ background: var(--menu-button-booth); color: #fff; }
-  .menu-btn--directions{ background: var(--menu-button-directions); color: #fff; }
-  .menu-btn--layout{ background: var(--menu-button-layout); color: #fff; }
-  .menu-btn--survey{ background: var(--menu-button-survey); color: var(--page-text); }
-  .menu-btn--kakao{ background: var(--menu-button-kakao); color: var(--page-text); }
-
-  /* ---------- SECTIONS ---------- */
-  section.block{
-    position: relative;
-    padding: 5rem 6vw;
-    border-bottom: 4px solid var(--page-text);
-    overflow: hidden;
-  }
-
-  section.block:last-of-type{ border-bottom: none; }
-
-  .block-inner{
-    position: relative;
-    z-index: 2;
-    max-width: 760px;
-    margin: 0 auto;
-  }
-
-  .block-label-row{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 2.4rem;
-  }
-
+  /* ---------- SECTIONS COMMON ---------- */
+  section.block{ position:relative; padding:5rem 6vw; border-bottom:4px solid var(--page-text); overflow:hidden; }
+  section.block:last-of-type{ border-bottom:none; }
+  .block-inner{ position:relative; z-index:2; max-width:760px; margin:0 auto; }
+  .block-label-row{ display:flex; align-items:center; gap:1rem; margin-bottom:.8rem; }
   .block-label{
-    display: inline-block;
-    font-family: 'Pretendard', sans-serif;
-    font-weight: 800;
-    font-size: clamp(1.5rem, 4.5vw, 2.1rem);
-    padding-bottom: .3rem;
-    border-bottom: 5px solid var(--section-accent);
+    display:inline-block; font-weight:800; font-size:clamp(1.5rem,4.5vw,2.1rem);
+    padding-bottom:.3rem; border-bottom:5px solid var(--section-accent);
   }
+  .block-sub{ font-size:.92rem; color:#5b5347; margin-bottom:2.4rem; line-height:1.6; }
+  .block-label-row .deco-bookstack{ position:static; width:clamp(44px,6vw,64px); transform:rotate(-4deg); }
 
-  .block-label-row .deco-bookstack{
-    position: static;
-    width: clamp(44px, 6vw, 64px);
-    transform: rotate(-4deg);
-  }
+  #timeline{ background:var(--page-background); }
+  #booth{ background:var(--card-background); }
+  #event{ background:var(--page-background); }
+  #layout{ background:var(--card-background); }
 
-  #booth{ background: var(--card-background); }
-  #layout{ background: var(--page-background); }
-
-  #booth .deco-glasses{
-    bottom: 1%;
-    right: -2%;
-    width: clamp(80px, 12vw, 150px);
-    transform: rotate(6deg);
-    opacity: .85;
-  }
-
-  #booth .deco-guitar{
-    top: 4%;
-    right: 2%;
-    width: clamp(52px, 8vw, 92px);
-    transform: rotate(10deg);
-    opacity: .9;
-  }
+  #booth .deco-glasses{ bottom:1%; right:-2%; width:clamp(80px,12vw,150px); transform:rotate(6deg); opacity:.85; }
+  #booth .deco-guitar{ top:4%; right:2%; width:clamp(52px,8vw,92px); transform:rotate(10deg); opacity:.9; }
 
   .sub-card{
-    background: var(--page-background);
-    border: 2.5px solid var(--page-text);
-    border-radius: 14px;
-    padding: 1.4rem 1.6rem;
-    margin-bottom: 1.1rem;
+    background:var(--page-background); border:2.5px solid var(--page-text); border-radius:14px;
+    padding:1.4rem 1.6rem; margin-bottom:1.1rem;
+  }
+  #layout .sub-card{ background:var(--card-background); }
+  .sub-card .sub-title{ font-weight:800; font-size:1.02rem; margin-bottom:.4rem; color:var(--section-accent-deep); }
+  .sub-card p{ font-size:.95rem; line-height:1.7; color:#3a332a; }
+
+  /* ---------- TIMELINE ---------- */
+  .timeline{ position:relative; padding-left:1.6rem; border-left:3px solid var(--page-text); }
+  .t-item{ position:relative; margin-bottom:2.1rem; }
+  .t-item::before{
+    content:''; position:absolute; left:-2.05rem; top:.3rem; width:14px; height:14px;
+    border-radius:50%; background:var(--section-accent); border:2px solid var(--page-text);
+  }
+  .t-item.t-day::before{ background:var(--badge-background); }
+  .t-item.t-main::before{ background:var(--facts-tag-background); }
+  .t-time{ display:inline-block; font-weight:800; font-size:.95rem; margin-bottom:.3rem; }
+  .t-desc{ font-size:.95rem; line-height:1.7; color:#3a332a; }
+  .t-sub-list{ margin-top:.7rem; padding-left:1.1rem; border-left:2px dashed #cfc6b3; }
+  .t-sub{ margin-bottom:.9rem; }
+  .t-sub:last-child{ margin-bottom:0; }
+  .t-sub .t-time{ font-size:.88rem; }
+  .t-sub .t-desc{ font-size:.9rem; }
+  .note-inline{ font-size:.75rem; color:#a49a86; }
+
+  /* ---------- BOOTH GRID ---------- */
+  .booth-headcopy{
+    font-weight:800; font-size:1.1rem; margin-bottom:2rem; padding:1rem 1.2rem;
+    background:var(--page-background); border-radius:12px; border:2px solid var(--page-text);
+  }
+  .booth-card{
+    display:flex; gap:1rem; background:var(--page-background); border:2.5px solid var(--page-text);
+    border-radius:14px; padding:1.3rem 1.4rem; margin-bottom:1rem;
+  }
+  .booth-num{
+    flex:0 0 auto; width:2.1rem; height:2.1rem; border-radius:50%; background:var(--page-text);
+    color:var(--page-background); font-weight:800; font-size:.9rem; display:flex; align-items:center; justify-content:center;
+  }
+  .booth-body{ flex:1 1 auto; min-width:0; }
+  .booth-title{ font-weight:800; font-size:1rem; margin-bottom:.5rem; }
+  .booth-org{ font-weight:600; font-size:.78em; color:#6b6255; }
+  .booth-desc{ list-style:none; }
+  .booth-desc li{ font-size:.9rem; line-height:1.65; color:#3a332a; margin-bottom:.4rem; }
+  .booth-desc li:last-child{ margin-bottom:0; }
+  .time-chip{
+    display:inline-block; background:var(--section-accent); color:#fff; font-weight:700;
+    font-size:.72rem; padding:.12rem .5rem; border-radius:999px; margin-right:.4rem;
+  }
+  .booth-tbd{ font-size:.88rem; color:#a49a86; font-style:italic; }
+
+  /* ---------- BOOTH INDEX ---------- */
+  .booth-index{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+    gap:.55rem;
+    margin-bottom:2.2rem;
+  }
+  .booth-index a{
+    display:flex; align-items:center; justify-content:center;
+    aspect-ratio:1/1; border-radius:10px; border:2px solid var(--page-text);
+    background:var(--card-background); color:var(--page-text);
+    font-weight:800; font-size:.95rem; text-decoration:none;
+    transition:transform .12s ease, background .12s ease, color .12s ease;
+  }
+  .booth-index a:hover{
+    background:var(--section-accent); color:#fff; transform:translateY(-2px);
   }
 
-  #layout .sub-card{ background: var(--card-background); }
-
-  .sub-card .sub-title{
-    font-weight: 800;
-    font-size: 1.02rem;
-    margin-bottom: .4rem;
-    color: var(--section-accent-deep);
+  /* ---------- EVENT FLOW ---------- */
+  .event-headcopy{ font-weight:800; font-size:1.15rem; margin-bottom:.5rem; }
+  .event-note{ font-size:.8rem; color:#8a8069; margin-bottom:2rem; }
+  .event-block{ margin-bottom:2.2rem; }
+  .event-block:last-child{ margin-bottom:0; }
+  .event-title{ font-weight:800; font-size:1rem; margin-bottom:1rem; color:var(--section-accent-deep); }
+  .event-flow{ display:flex; flex-wrap:wrap; align-items:center; gap:.6rem; }
+  .event-step{
+    display:flex; align-items:center; gap:.6rem; background:var(--card-background);
+    border:2px solid var(--page-text); border-radius:12px; padding:.8rem 1rem; flex:1 1 220px;
   }
-
-  .sub-card p{
-    font-size: .95rem;
-    line-height: 1.7;
-    color: #3a332a;
+  #event .event-step{ background:var(--page-background); }
+  .step-num{
+    flex:0 0 auto; width:1.7rem; height:1.7rem; border-radius:50%; background:var(--section-accent);
+    color:#fff; font-weight:800; font-size:.82rem; display:flex; align-items:center; justify-content:center;
   }
+  .step-text{ font-size:.87rem; line-height:1.55; }
+  .step-arrow{ font-weight:800; font-size:1.1rem; color:var(--page-text); flex:0 0 auto; }
 
-  .layout-img{
-    width: 100%;
-    border: 2.5px solid var(--page-text);
-    border-radius: 14px;
-    display: block;
-  }
+  /* ---------- LAYOUT / ACCESS ---------- */
+  .layout-img{ width:100%; border:2.5px solid var(--page-text); border-radius:14px; display:block; margin-bottom:1rem; }
+  .footnote-list{ list-style:none; margin:1.5rem 0 2.6rem; font-size:.82rem; color:#6b6255; line-height:1.8; }
+  .footnote-list li{ padding-left:1.2rem; position:relative; }
+  .footnote-list li::before{ content:attr(data-mark); position:absolute; left:0; }
 
-  .layout-caption{
-    margin-top: 1rem;
-    font-size: .85rem;
-    color: #6b6255;
-    line-height: 1.7;
+  .access-title{ font-weight:800; font-size:1.05rem; margin-bottom:1rem; }
+  .access-row{
+    display:flex; gap:1rem; padding:1rem 0; border-bottom:1px solid #e4dbc6;
   }
+  .access-row:last-child{ border-bottom:none; }
+  .access-mode{ flex:0 0 84px; font-weight:800; font-size:.9rem; color:var(--section-accent-deep); }
+  .access-detail{ font-size:.88rem; line-height:1.7; color:#3a332a; }
 
   /* ---------- FOOTER ---------- */
   footer{
-    position: relative;
-    background: var(--footer-background);
-    color: var(--footer-text);
-    text-align: center;
-    padding: 3rem 6vw;
-    font-size: .85rem;
-    line-height: 1.9;
-    overflow: hidden;
+    position:relative; background:var(--footer-background); color:var(--footer-text);
+    text-align:center; padding:3rem 6vw; font-size:.85rem; line-height:1.9; overflow:hidden;
   }
+  footer .footer-inner{ position:relative; z-index:2; }
+  footer .deco-paperplane{ top:8%; left:0%; width:clamp(46px,7vw,78px); transform:rotate(-14deg); opacity:.9; }
+  footer .name{ font-weight:800; font-size:1.15rem; margin-bottom:.4rem; color:var(--footer-accent); }
 
-  footer .footer-inner{
-    position: relative;
-    z-index: 2;
+  @media (max-width:480px){
+    .menu-btn{ padding:.8rem 1.2rem; font-size:.85rem; }
+    .facts{ padding:1.1rem 1.3rem; }
+    .hero .deco-flower, .hero .deco-coffeecup{ width:60px; }
+    .block-label-row .deco-bookstack{ width:38px; }
+    .booth-card{ padding:1.1rem 1rem; gap:.7rem; }
+    .event-step{ flex-basis:100%; }
+    .step-arrow{ transform:rotate(90deg); margin:0 auto; }
   }
-
-  footer .deco-paperplane{
-    top: 8%;
-    left: 0%;
-    width: clamp(46px, 7vw, 78px);
-    transform: rotate(-14deg);
-    opacity: .9;
-  }
-
-  footer .name{
-    font-family: 'Pretendard', sans-serif;
-    font-weight: 800;
-    font-size: 1.15rem;
-    margin-bottom: .4rem;
-    color: var(--footer-accent);
-  }
-
-  @media (max-width: 480px){
-    .menu-btn{ padding: .8rem 1.2rem; font-size: .85rem; }
-    .facts{ padding: 1.1rem 1.3rem; }
-    .hero .deco-flower, .hero .deco-coffeecup{ width: 60px; }
-    .block-label-row .deco-bookstack{ width: 38px; }
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    .menu-btn{ transition: none; }
-  }
+  @media (prefers-reduced-motion: reduce){ .menu-btn{ transition:none; } }
 </style>
 </head>
 <body>
@@ -353,20 +246,12 @@
     <img class="deco deco-ministar" src="images/deco/ministar.png" alt="" aria-hidden="true">
     <img class="deco deco-flower" src="images/deco/flower.png" alt="" aria-hidden="true">
     <img class="deco deco-coffeecup" src="images/deco/coffeecup.png" alt="" aria-hidden="true">
-
     <div class="hero-content">
       <span class="badge">2026 책모꼬지</span>
       <h1>성북 북페스티벌</h1>
-
       <div class="facts">
-        <div class="row">
-          <span class="tag">일시</span>
-          <span class="val">2026. 9. 6.(일) 15:00 – 20:00</span>
-        </div>
-        <div class="row">
-          <span class="tag">장소</span>
-          <span class="val">성북구청 앞 바람마당교,<br>성북천 수변활력거점 일대</span>
-        </div>
+        <div class="row"><span class="tag">일시</span><span class="val">2026. 9. 6.(일) 15:00 – 20:00</span></div>
+        <div class="row"><span class="tag">장소</span><span class="val">성북구청 앞 바람마당교,<br>성북천 수변활력거점 일대</span></div>
       </div>
     </div>
   </section>
@@ -374,8 +259,10 @@
   <div class="menu-wrap">
     <div class="menu-row">
       <a class="menu-btn menu-btn--booth" href="#booth">부스</a>
-      <a class="menu-btn menu-btn--directions" href="https://www.sb.go.kr/www/contents.do?key=6008" target="_blank" rel="noopener">오시는길</a>
+      <a class="menu-btn menu-btn--timeline" href="#timeline">공연</a>
+      <a class="menu-btn menu-btn--event" href="#event">이벤트</a>
       <a class="menu-btn menu-btn--layout" href="#layout">배치도</a>
+      <a class="menu-btn menu-btn--directions" href="https://www.sb.go.kr/www/contents.do?key=6008" target="_blank" rel="noopener">오시는길</a>
     </div>
     <div class="menu-row">
       <a class="menu-btn menu-btn--survey" href="https://forms.gle/K33oqQBnRtGmAzyP6" target="_blank" rel="noopener">설문조사</a>
@@ -383,47 +270,335 @@
     </div>
   </div>
 
+  <!-- 구간3: 하루 흐름 타임라인 -->
+  <section class="block" id="timeline">
+    <div class="block-inner">
+      <div class="block-label-row"><h2 class="block-label">하루의 흐름</h2></div>
+      <p class="block-sub">낮의 체험과 저녁의 무대가 하나로 이어지는 성북 북페스티벌의 하루</p>
+
+      <div class="timeline">
+        <div class="t-item t-day">
+          <span class="t-time">15:00 – 20:00</span>
+          <p class="t-desc">체험부스 · 야외도서관 · 어린이놀이터</p>
+        </div>
+        <div class="t-item t-day">
+          <span class="t-time">15:00 – 16:00</span>
+          <p class="t-desc">버스킹 공연</p>
+        </div>
+        <div class="t-item t-main">
+          <span class="t-time">18:30 – 20:00</span>
+          <p class="t-desc">메인행사</p>
+          <div class="t-sub-list">
+            <div class="t-sub">
+              <span class="t-time">18:30</span>
+              <p class="t-desc">오프닝 공연 – 꿈나래아동지역센터</p>
+            </div>
+            <div class="t-sub">
+              <span class="t-time">18:40</span>
+              <p class="t-desc">개회식</p>
+            </div>
+            <div class="t-sub">
+              <span class="t-time">19:00</span>
+              <p class="t-desc">
+                사회자 – 박민영(보문숲길도서관 네트워크 보문보물) <span class="note-inline">텍스트 수정 예정</span><br>
+                메인공연 – 클래식앙상블 포크앙상블 FORK Ensemble / 아카펠라 보이스토이 VoiceToy
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 구간4: 부스 운영 내용 -->
   <section class="block" id="booth">
     <img class="deco deco-guitar" src="images/deco/guitar.png" alt="" aria-hidden="true">
     <img class="deco deco-glasses" src="images/deco/glasses.png" alt="" aria-hidden="true">
-
     <div class="block-inner">
       <div class="block-label-row">
         <h2 class="block-label">부스 &amp; 프로그램</h2>
         <img class="deco-bookstack" src="images/deco/bookstack.png" alt="" aria-hidden="true">
       </div>
+      <p class="block-sub">순서 조정 예정</p>
+      <p class="booth-headcopy">성북구립도서관 네트워크, 유관기관과 함께하는 체험부스</p>
 
-      <div class="sub-card">
-        <p class="sub-title">체험부스</p>
-        <p>성북구립도서관 네트워크 유관기관</p>
+      <div class="booth-index">
+        <a href="#b01" title="히히살롱">1</a>
+        <a href="#b02" title="우리랑">2</a>
+        <a href="#b03" title="동네꿀딴지">3</a>
+        <a href="#b04" title="석이네 × 쓰담쓰담">4</a>
+        <a href="#b05" title="달빛청년넷">5</a>
+        <a href="#b06" title="예술로26길">6</a>
+        <a href="#b07" title="살롱드장위">7</a>
+        <a href="#b08" title="한성대학교 문헌정보전공">8</a>
+        <a href="#b09" title="동덕여자대학교 사심가득">9</a>
+        <a href="#b10" title="새마을문고">10</a>
+        <a href="#b11" title="문화공간이육사·한국근현대문학관">11</a>
+        <a href="#b12" title="작은도서관네트워크">12</a>
+        <a href="#b13" title="보문숲길도서관">13</a>
+        <a href="#b14" title="성북길빛도서관">14</a>
+        <a href="#b15" title="글빛·서경로꿈마루도서관">15</a>
+        <a href="#b16" title="아리랑어린이도서관">16</a>
+        <a href="#b17" title="성북어린이청소년·월곡꿈그림도서관">17</a>
+        <a href="#b18" title="해오름도서관">18</a>
       </div>
 
-      <div class="sub-card">
-        <p class="sub-title">공연</p>
-        <p>15:00 대학생 버스킹<br>18:00 앙상블, 아카펠라</p>
+      <div class="booth-card" id="b01">
+        <div class="booth-num">01</div>
+        <div class="booth-body">
+          <p class="booth-title">히히살롱 <span class="booth-org">&amp; 성북정보도서관</span></p>
+          <ul class="booth-desc">
+            <li><span class="time-chip">15:00</span>1! 2! 3! (성북탄소중립배움터) — 1인 이끼 정원으로 3도 낮춰요, 이끼 관찰 및 이끼정원 만들기</li>
+            <li><span class="time-chip">18:00</span>비즈끈갈피 만들기 (책의기분) — 비즈로 만드는 나만의 책갈피</li>
+            <li>성북구립도서관 네트워크 &lt;히히살롱&gt; 소개 및 홍보 전시</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="sub-card">
-        <p class="sub-title">야외도서관</p>
-        <p>성북천에 펼쳐지는 가을 책 한 권</p>
+      <div class="booth-card" id="b02">
+        <div class="booth-num">02</div>
+        <div class="booth-body">
+          <p class="booth-title">우리랑 <span class="booth-org">&amp; 아리랑도서관</span></p>
+          <ul class="booth-desc">
+            <li>파우치 꾸미기 — 아리랑도서관 네트워크 &lt;우리랑&gt;과 함께하는 청소년의 푸른 바다 '보이콧' 부스! 나만의 파우치를 직접 꾸며보세요.</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="sub-card">
-        <p class="sub-title">이벤트</p>
-        <p>발길 닿는 곳마다 손에 남은 즐거움</p>
+      <div class="booth-card" id="b03">
+        <div class="booth-num">03</div>
+        <div class="booth-body">
+          <p class="booth-title">동네꿀딴지 <span class="booth-org">&amp; 종암동새날도서관</span></p>
+          <ul class="booth-desc">
+            <li>책설기 문진 만들기 — '손이말하는테이블'과 따뜻한 수어를 배우고, 성북구립도서관 마스코트 '책설기' 문진을 나만의 색으로 예쁘게 색칠해 보는 종암동새날도서관 네트워크 &lt;동네꿀단지&gt; 부스입니다.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="booth-card" id="b04">
+        <div class="booth-num">04</div>
+        <div class="booth-body">
+          <p class="booth-title">석이네 × 쓰담쓰담 <span class="booth-org">&amp; 석관동미리내도서관</span></p>
+          <ul class="booth-desc">
+            <li>읽고, 줍고 함께 만드는 동네</li>
+            <li><span class="time-chip">15:00</span>동낵: 동네스낵(석이네) — 동네에서 수거한 쓰레기를 스낵으로 교환해주는 환경 캠페인</li>
+            <li><span class="time-chip">17:00</span>다온책방(쓰담쓰담) — 성북구 역대 한 책 전시 및 체험</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="booth-card" id="b05">
+        <div class="booth-num">05</div>
+        <div class="booth-body">
+          <p class="booth-title">달빛청년넷 <span class="booth-org">&amp; 달빛마루도서관</span></p>
+          <ul class="booth-desc">
+            <li>미니 아카이브 꾸미기 — 작은 아카이브 꾸러미 만들기, 대형 마을지도에 스탬프·스티커로 동네 이야기 꾸미기</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="booth-card" id="b06">
+        <div class="booth-num">06</div>
+        <div class="booth-body">
+          <p class="booth-title">예술로26길 <span class="booth-org">&amp; 청수·정릉도서관</span></p>
+          <ul class="booth-desc">
+            <li>예술로26길 맛보기 — 정릉동 예술로26길 공방과 함께 공예활동 체험하기 &amp; 공방전시 관람</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="booth-card" id="b07">
+        <div class="booth-num">07</div>
+        <div class="booth-body">
+          <p class="booth-title">살롱드장위 with 장곡시장 <span class="booth-org">&amp; 장위행복누림·오동숲속도서관</span></p>
+          <ul class="booth-desc">
+            <li><span class="time-chip">15:00</span>책설기 바람떡 빚기</li>
+            <li><span class="time-chip">17:30</span>키링 만들기 — 장곡시장 &lt;써니쏘잉&gt;, &lt;인연케이크&gt;와 협력하여 성북구립도서관 마스코트 '책설기'와 함께하는 달콤한 바람떡과 귀여운 키링을 직접 만드는 지역 상생 프로그램</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="booth-card" id="b08">
+        <div class="booth-num">08</div>
+        <div class="booth-body">
+          <p class="booth-title">한성대학교 문헌정보전공</p>
+          <ul class="booth-desc">
+            <li>나만의 책 향기 만들기 — 책을 읽고 느낀 감정을 향기로 표현해보세요! 마음에 남는 구절을 적고, 은은한 아로마 북사쉐를 만들며 나만의 특별한 책 향기를 완성해 가실 수 있습니다.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="booth-card" id="b09">
+        <div class="booth-num">09</div>
+        <div class="booth-body">
+          <p class="booth-title">동덕여자대학교 문헌정보학과 사심가득</p>
+          <ul class="booth-desc">
+            <li>나만의 북 클리커 만들기 — 좋아하는 책 속 문장을 고르고, 그 문장에 어울리는 파츠로 북 클리커를 만들어 보세요. 나만의 독서 굿즈로 간직할 수 있어요.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="booth-card" id="b10">
+        <div class="booth-num">10</div>
+        <div class="booth-body">
+          <p class="booth-title">새마을문고</p>
+          <p class="booth-tbd">내용 준비 중 — 시안 확정 이후 업데이트 예정</p>
+        </div>
+      </div>
+
+      <div class="booth-card" id="b11">
+        <div class="booth-num">11</div>
+        <div class="booth-body">
+          <p class="booth-title">문화공간이육사·한국근현대문학관</p>
+          <ul class="booth-desc">
+            <li>문학 체험 활동 — 이육사 시를 감상하고 시어 스티커를 활용한 아크릴 키링 만들기</li>
+            <li>꽃 비즈 책갈피 만들기 – 꽃말과 함께 만나는 성북 문인 이야기</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="booth-card" id="b12">
+        <div class="booth-num">12</div>
+        <div class="booth-body">
+          <p class="booth-title">작은도서관네트워크</p>
+          <p class="booth-tbd">내용 준비 중 — 시안 확정 이후 업데이트 예정</p>
+        </div>
+      </div>
+
+      <div class="booth-card" id="b13">
+        <div class="booth-num">13</div>
+        <div class="booth-body">
+          <p class="booth-title">보문숲길도서관 <span class="booth-org">&amp; 보문보물</span></p>
+          <ul class="booth-desc">
+            <li>찾아봐요 보문보물! — 어린이는 커다란 보문보물 지도 퍼즐 맞추기, 성인은 보물(기관·단체)에 대한 퀴즈 맞혀 보문보물 지도를 완성해주세요!</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="booth-card" id="b14">
+        <div class="booth-num">14</div>
+        <div class="booth-body">
+          <p class="booth-title">성북길빛도서관 <span class="booth-org">&amp; 길빛로52</span></p>
+          <ul class="booth-desc">
+            <li><span class="time-chip">15:00</span>폴라로이드 꾸미기 — 점자 스티커로 폴라로이드 꾸미기 (동덕여자대학교 동아리 북덕)</li>
+            <li><span class="time-chip">17:00</span>제로웨이스트샵 일상공감 — 책, 지구, 사람을 향하는 메시지 실크스크린 찍기</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="booth-card" id="b15">
+        <div class="booth-num">15</div>
+        <div class="booth-body">
+          <p class="booth-title">글빛·서경로꿈마루도서관 <span class="booth-org">&amp; 글빛클라우드</span></p>
+          <ul class="booth-desc">
+            <li>놀면서 알아보는 ICT</li>
+            <li>Play1. 알파고(AI)와 함께하는 오목 한 판!</li>
+            <li>Play2. 놀면서 배우는 레트로 코딩!</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="booth-card" id="b16">
+        <div class="booth-num">16</div>
+        <div class="booth-body">
+          <p class="booth-title">아리랑어린이도서관 <span class="booth-org">&amp; 한책추진단 운영위원회 아동분과</span></p>
+          <ul class="booth-desc">
+            <li>어린이 한 책 ZONE</li>
+            <li>체험 – 퀴즈 맞추기 및 컬러링+서평지, 최종후보도서 낭독</li>
+            <li>전시 및 설문 – 2026 어린이 한 책 최종후보도서 4권 전시, 인식/경험 조사</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="booth-card" id="b17">
+        <div class="booth-num">17</div>
+        <div class="booth-body">
+          <p class="booth-title">성북어린이청소년·월곡꿈그림도서관 <span class="booth-org">&amp; 청청프로젝트·독한친구들</span></p>
+          <ul class="booth-desc">
+            <li>청청펀펀프로젝트</li>
+            <li>성북구 청소년 한책추진단 &lt;청청프로젝트&gt; 소개와 청소년들과 함께 읽고 있는 도서 전시</li>
+            <li>청청프로젝트 관련 OX 퀴즈 &amp; 향기를 담은 한 문장 체험하기</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="booth-card" id="b18">
+        <div class="booth-num">18</div>
+        <div class="booth-body">
+          <p class="booth-title">해오름도서관 <span class="booth-org">&amp; 한책추진단 운영위원회 주민분과</span></p>
+          <ul class="booth-desc">
+            <li>함께 즐겨요, 한 책! — 성북구 한 책을 전시와 퀴즈로 즐기고, 마음에 남은 한 문장을 필사하며 책과 함께하는 특별한 시간을 만들어 보세요.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 구간5: 이벤트 -->
+  <section class="block" id="event">
+    <div class="block-inner">
+      <div class="block-label-row"><h2 class="block-label">이벤트</h2></div>
+      <p class="event-headcopy">발길 닿는 곳마다 손에 남는 즐거움</p>
+      <p class="event-note">※ 이벤트 선물은 한정수량으로 조기 소진될 수 있습니다.</p>
+
+      <div class="event-block">
+        <p class="event-title">스탬프랠리</p>
+        <div class="event-flow">
+          <div class="event-step"><span class="step-num">1</span><span class="step-text">[운영부스]에서 랠리 종이 받기</span></div>
+          <span class="step-arrow">→</span>
+          <div class="event-step"><span class="step-num">2</span><span class="step-text">체험부스 5곳을 방문해 스탬프 모으기</span></div>
+          <span class="step-arrow">→</span>
+          <div class="event-step"><span class="step-num">3</span><span class="step-text">[운영부스]에서 인증하고 슬러시 쿠폰 수령</span></div>
+        </div>
+      </div>
+
+      <div class="event-block">
+        <p class="event-title">설문이벤트</p>
+        <div class="event-flow">
+          <div class="event-step"><span class="step-num">1</span><span class="step-text">'성북구립도서관' 카카오톡 채널 추가 <br><small>[QR / 라벨: 채널추가]</small></span></div>
+          <span class="step-arrow">→</span>
+          <div class="event-step"><span class="step-num">2</span><span class="step-text">책모꼬지 만족도 설문조사 참여 <br><small>[QR / 라벨: 설문]</small></span></div>
+          <span class="step-arrow">→</span>
+          <div class="event-step"><span class="step-num">3</span><span class="step-text">[운영부스]에서 인증하고 성북구립도서관 굿즈 수령</span></div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- 구간6: 배치도 · 오시는 길 -->
   <section class="block" id="layout">
     <div class="block-inner">
-      <h2 class="block-label" style="display:block; margin-bottom:2.4rem;">현장 배치도</h2>
+      <h2 class="block-label" style="display:block; margin-bottom:1.6rem;">배치도 &middot; 오시는 길</h2>
+
       <img class="layout-img" src="images/layout.jpg" alt="2026 성북 북페스티벌 현장 배치도">
-      <!--
-      <p class="layout-caption">
-        푸드트럭 · 부스 1~18번 · 무대(공연) · 야외도서관 · 버스킹존 · 참여전시 · 운영부스 · 어린이 놀이터 위치를 확인하세요.
-      </p>
-      -->
+
+      <ul class="footnote-list">
+        <li data-mark="① ">주차지원이 불가하오니, 대중교통을 이용해주세요.</li>
+        <li data-mark="② ">우천 등 기상 상황에 따라 일정이 변경·취소될 수 있습니다.</li>
+        <li data-mark="③ ">어린이놀이터는 안전을 위해 회차별 인원제한 입장으로 운영됩니다.</li>
+        <li data-mark="④ ">일부 부스는 재료 소진 시 조기 마감 또는 다른 체험으로 대체될 수 있습니다.</li>
+      </ul>
+
+      <p class="access-title">오시는 길</p>
+      <div class="access-row">
+        <span class="access-mode">① 버스</span>
+        <span class="access-detail">
+          간선버스 (성북구청) — 103, 142, 152, 272, 273<br>
+          지선버스 (성북구청·성북경찰서) — 1014, 1111, 1112, 1162, 2115
+        </span>
+      </div>
+      <div class="access-row">
+        <span class="access-mode">② 지하철</span>
+        <span class="access-detail">
+          4호선, 우이신설선 — 성신여대입구역/돈암역 하차 3번 출구<br>
+          6호선 — 보문역 하차 3번 출구
+        </span>
+      </div>
+      <div class="access-row">
+        <span class="access-mode">③ 마을버스</span>
+        <span class="access-detail">지선버스 (성북구청) — 성북03, 성북04</span>
+      </div>
     </div>
   </section>
 
@@ -433,7 +608,7 @@
       <p class="name">2026 성북 책모꼬지</p>
       <p>2026. 9. 6.(일) 15:00~20:00</p>
       <p>성북구청 앞 바람마당교, 성북천 수변활력거점 일대</p>
-      <p>주최| 성북구    주관| 성북문화재단</p>
+      <p>주최| 성북구&nbsp;&nbsp;&nbsp;주관| 성북문화재단</p>
     </div>
   </footer>
 
