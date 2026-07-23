@@ -262,7 +262,7 @@
       <a class="menu-btn menu-btn--timeline" href="#timeline">공연</a>
       <a class="menu-btn menu-btn--event" href="#event">이벤트</a>
       <a class="menu-btn menu-btn--layout" href="#layout">배치도</a>
-      <a class="menu-btn menu-btn--directions" href="https://www.sb.go.kr/www/contents.do?key=6008" target="_blank" rel="noopener">오시는길</a>
+      <a class="menu-btn menu-btn--directions" href=#layout">오시는길</a>
     </div>
     <div class="menu-row">
       <a class="menu-btn menu-btn--survey" href="https://forms.gle/K33oqQBnRtGmAzyP6" target="_blank" rel="noopener">설문조사</a>
@@ -613,6 +613,16 @@
       <p>주최| 성북구&nbsp;&nbsp;&nbsp;주관| 성북문화재단</p>
     </div>
   </footer>
-
+<script>
+  document.querySelectorAll('.booth-index a').forEach(function(link){
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target){
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  });
+</script>
 </body>
 </html>
