@@ -3,27 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2026 성북 책모꼬지 | 도서관 네트워크 ON, 성북을 밝히다</title>
+<title>2026 성북 북페스티벌 | 도서관 네트워크 ON, 성북을 밝힌다</title>
 <style>
   @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/static/pretendard.css');
+  @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 
   :root{
-    --night: #142238;
-    --night-deep: #0c1626;
-    --river: #2f5f66;
-    --lantern: #ffb648;
-    --lantern-soft: #ffd897;
-    --paper: #f6efe0;
-    --paper-dim: #cfd6de;
+    --cream: #f7efdc;
+    --coral: #e2532f;
+    --coral-deep: #c73f20;
+    --mustard: #f2b705;
+    --mustard-deep: #d99f00;
+    --ink: #1c1712;
+    --teal: #4f9c86;
+    --pink: #f3a7c2;
   }
 
   *{ margin:0; padding:0; box-sizing:border-box; }
 
-  html{ scroll-behavior:smooth; }
+  html{ scroll-behavior: smooth; }
 
   body{
-    background: var(--night);
-    color: var(--paper);
+    background: var(--cream);
+    color: var(--ink);
     font-family: 'Pretendard', -apple-system, sans-serif;
     overflow-x: hidden;
   }
@@ -31,265 +33,247 @@
   /* ---------- HERO ---------- */
   .hero{
     position: relative;
-    min-height: 100svh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 9vh 6vw 6vh;
     text-align: center;
-    padding: 8vh 6vw 10vh;
-    background:
-      radial-gradient(ellipse at 50% 15%, rgba(255,182,72,0.10), transparent 55%),
-      linear-gradient(180deg, var(--night-deep) 0%, var(--night) 45%, var(--river) 130%);
-    overflow: hidden;
+    background-color: var(--cream);
+    border-bottom: 4px solid var(--ink);
   }
 
-  .river-svg{
-    position: absolute;
-    bottom: 0; left: 0;
-    width: 100%;
-    height: 42%;
-    z-index: 0;
-  }
-
-  .lantern-dot{
-    animation: glow 3.2s ease-in-out infinite;
-  }
-  .lantern-dot:nth-child(3n){ animation-delay: .6s; }
-  .lantern-dot:nth-child(4n){ animation-delay: 1.4s; }
-  .lantern-dot:nth-child(5n){ animation-delay: 2.1s; }
-
-  @keyframes glow{
-    0%, 100%{ opacity:.35; r: 2.4; }
-    50%{ opacity:1; r: 3.4; }
-  }
-
-  .eyebrow{
-    position: relative; z-index: 1;
-    font-size: clamp(.75rem, 1.4vw, .95rem);
-    letter-spacing: .32em;
-    color: var(--lantern-soft);
-    margin-bottom: 1.4rem;
-    text-transform: uppercase;
+  .badge{
+    display: inline-block;
+    background: var(--mustard);
+    color: var(--ink);
+    font-family: 'Black Han Sans', 'Pretendard', sans-serif;
+    font-size: clamp(.85rem, 2vw, 1.05rem);
+    padding: .5rem 1.3rem;
+    border-radius: 999px;
+    border: 3px solid var(--ink);
+    letter-spacing: .02em;
+    transform: rotate(-3deg);
+    margin-bottom: 1.6rem;
   }
 
   h1{
-    position: relative; z-index: 1;
-    font-family: 'Noto Serif KR', 'Pretendard', serif;
-    font-weight: 700;
-    font-size: clamp(2.4rem, 7vw, 5rem);
-    line-height: 1.15;
+    font-family: 'Black Han Sans', 'Pretendard', sans-serif;
+    font-size: clamp(2.6rem, 9vw, 5.2rem);
+    line-height: 1.1;
     letter-spacing: -0.01em;
+    color: var(--ink);
   }
 
-  h1 .accent{
-    color: var(--lantern);
+  h1 .small{
+    display: block;
+    font-size: .5em;
+    margin-bottom: .2em;
   }
 
-  .slogan{
-    position: relative; z-index: 1;
-    margin-top: 1.6rem;
-    font-size: clamp(1.05rem, 2.4vw, 1.4rem);
-    color: var(--paper-dim);
-    letter-spacing: .02em;
+  .facts{
+    margin-top: 2.6rem;
+    display: inline-flex;
+    flex-direction: column;
+    gap: .55rem;
+    text-align: left;
+    background: #fff;
+    border: 3px solid var(--ink);
+    border-radius: 18px;
+    padding: 1.4rem 1.8rem;
   }
 
-  .slogan b{
-    color: var(--lantern-soft);
+  .facts .row{
+    display: flex;
+    gap: .9rem;
+    align-items: baseline;
+    font-size: clamp(.95rem, 2.4vw, 1.15rem);
+  }
+
+  .facts .tag{
+    flex: 0 0 auto;
+    background: var(--teal);
+    color: #fff;
+    font-weight: 700;
+    font-size: .78em;
+    padding: .18rem .6rem;
+    border-radius: 6px;
+  }
+
+  .facts .val{
     font-weight: 600;
+    line-height: 1.5;
   }
 
-  .scrolldown{
-    position: relative; z-index:1;
-    margin-top: 4rem;
-    font-size: .8rem;
-    color: var(--paper-dim);
-    letter-spacing: .1em;
-    opacity: .7;
+  /* ---------- MENU ROW ---------- */
+  nav.menu{
+    display: flex;
+    background: var(--ink);
+    border-bottom: 4px solid var(--ink);
   }
 
-  /* ---------- INFO ---------- */
-  .info{
-    background: var(--paper);
-    color: var(--night-deep);
-    padding: 7rem 6vw 6rem;
+  nav.menu a{
+    flex: 1 1 0;
+    text-align: center;
+    padding: 1.15rem .5rem;
+    color: var(--cream);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: clamp(.82rem, 2.6vw, 1.05rem);
+    letter-spacing: .02em;
+    border-right: 2px solid rgba(247,239,220,0.18);
+    transition: background .15s ease, color .15s ease;
   }
 
-  .info-inner{
-    max-width: 720px;
+  nav.menu a:last-child{ border-right: none; }
+
+  nav.menu a:nth-child(1):hover{ background: var(--coral); }
+  nav.menu a:nth-child(2):hover{ background: var(--mustard); color: var(--ink); }
+  nav.menu a:nth-child(3):hover{ background: var(--teal); }
+  nav.menu a:nth-child(4):hover{ background: var(--pink); color: var(--ink); }
+
+  /* ---------- SECTIONS ---------- */
+  section.block{
+    padding: 5rem 6vw;
+    border-bottom: 4px solid var(--ink);
+  }
+
+  section.block:last-of-type{ border-bottom: none; }
+
+  .block-inner{
+    max-width: 760px;
     margin: 0 auto;
   }
 
-  .info-label{
-    font-size: .8rem;
-    letter-spacing: .28em;
-    text-transform: uppercase;
-    color: var(--river);
-    font-weight: 700;
-    margin-bottom: 1rem;
+  .block-label{
+    display: inline-block;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: clamp(1.5rem, 4.5vw, 2.1rem);
+    margin-bottom: 2.4rem;
+    padding-bottom: .3rem;
+    border-bottom: 5px solid var(--coral);
   }
 
-  .info-title{
-    font-family: 'Noto Serif KR', serif;
-    font-size: clamp(1.6rem, 4vw, 2.2rem);
-    font-weight: 700;
-    margin-bottom: 3rem;
-    line-height: 1.4;
+  #booth{ background: #fff; }
+  #layout{ background: var(--cream); }
+
+  .sub-card{
+    background: var(--cream);
+    border: 2.5px solid var(--ink);
+    border-radius: 14px;
+    padding: 1.4rem 1.6rem;
+    margin-bottom: 1.1rem;
   }
 
-  .fact-list{
-    list-style: none;
-    border-top: 1px solid rgba(20,34,56,0.15);
+  #layout .sub-card{ background: #fff; }
+
+  .sub-card .sub-title{
+    font-weight: 800;
+    font-size: 1.02rem;
+    margin-bottom: .4rem;
+    color: var(--coral-deep);
   }
 
-  .fact-list li{
-    display: flex;
-    gap: 2rem;
-    padding: 1.6rem 0;
-    border-bottom: 1px solid rgba(20,34,56,0.15);
-  }
-
-  .fact-key{
-    flex: 0 0 88px;
-    font-weight: 700;
-    color: var(--river);
+  .sub-card p{
     font-size: .95rem;
-    letter-spacing: .04em;
-    padding-top: .15rem;
+    line-height: 1.7;
+    color: #3a332a;
   }
 
-  .fact-val{
-    font-size: clamp(1rem, 2vw, 1.15rem);
-    line-height: 1.6;
-  }
-
-  .fact-val .sub{
-    display:block;
-    font-size: .88rem;
-    color: #5b6470;
-    margin-top: .25rem;
-  }
-
-  /* ---------- CTA ---------- */
-  .cta-wrap{
-    max-width: 720px;
-    margin: 3.5rem auto 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: .9rem;
-  }
-
-  .btn{
-    display: inline-flex;
-    align-items: center;
-    gap: .5rem;
-    padding: 1rem 1.6rem;
-    border-radius: 999px;
-    font-size: .98rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: transform .18s ease, box-shadow .18s ease;
-  }
-
-  .btn-primary{
-    background: var(--night);
-    color: var(--lantern-soft);
-    box-shadow: 0 8px 24px rgba(20,34,56,0.18);
-  }
-
-  .btn-primary:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(20,34,56,0.25);
+  .placeholder-box{
+    border: 2.5px dashed var(--ink);
+    border-radius: 14px;
+    padding: 3.5rem 1.5rem;
+    text-align: center;
+    color: #6b6255;
+    font-size: .92rem;
+    background: #fff;
   }
 
   /* ---------- FOOTER ---------- */
   footer{
-    background: var(--night-deep);
-    color: var(--paper-dim);
+    background: var(--ink);
+    color: var(--cream);
     text-align: center;
-    padding: 3.4rem 6vw;
+    padding: 3rem 6vw;
     font-size: .85rem;
     line-height: 1.9;
   }
 
   footer .name{
-    color: var(--paper);
-    font-weight: 600;
-    font-size: .95rem;
-    margin-bottom: .3rem;
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    .lantern-dot{ animation: none; opacity: .8; }
-    html{ scroll-behavior: auto; }
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 1.15rem;
+    margin-bottom: .4rem;
+    color: var(--mustard);
   }
 
   @media (max-width: 480px){
-    .fact-list li{ gap: 1.1rem; }
-    .fact-key{ flex-basis: 68px; font-size: .85rem; }
+    nav.menu a{ padding: .95rem .3rem; font-size: .8rem; }
+    .facts{ padding: 1.1rem 1.3rem; }
   }
 </style>
 </head>
 <body>
 
   <section class="hero">
-    <p class="eyebrow">2026. 9. 6. SUN · 성북천</p>
-    <h1>2026 성북<br><span class="accent">책모꼬지</span></h1>
-    <p class="slogan">도서관 네트워크 <b>ON</b>, 성북을 밝히다</p>
-    <p class="scrolldown">↓ 자세히 보기</p>
+    <span class="badge">2026 책모꼬지</span>
+    <h1>성북<br>북페스티벌</h1>
 
-    <svg class="river-svg" viewBox="0 0 1200 260" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,140 C200,180 400,110 600,150 C800,190 1000,120 1200,150 L1200,260 L0,260 Z" fill="#0c1626" opacity="0.9"/>
-      <g fill="#ffb648">
-        <circle class="lantern-dot" cx="90" cy="130" r="2.6"/>
-        <circle class="lantern-dot" cx="180" cy="150" r="2.6"/>
-        <circle class="lantern-dot" cx="270" cy="122" r="2.6"/>
-        <circle class="lantern-dot" cx="360" cy="146" r="2.6"/>
-        <circle class="lantern-dot" cx="450" cy="128" r="2.6"/>
-        <circle class="lantern-dot" cx="540" cy="152" r="2.6"/>
-        <circle class="lantern-dot" cx="630" cy="132" r="2.6"/>
-        <circle class="lantern-dot" cx="720" cy="156" r="2.6"/>
-        <circle class="lantern-dot" cx="810" cy="126" r="2.6"/>
-        <circle class="lantern-dot" cx="900" cy="148" r="2.6"/>
-        <circle class="lantern-dot" cx="990" cy="130" r="2.6"/>
-        <circle class="lantern-dot" cx="1080" cy="150" r="2.6"/>
-      </g>
-    </svg>
+    <div class="facts">
+      <div class="row">
+        <span class="tag">일시</span>
+        <span class="val">2026. 9. 6.(일) 15:00 – 20:00</span>
+      </div>
+      <div class="row">
+        <span class="tag">장소</span>
+        <span class="val">성북구청 앞 바람마당교,<br>성북천 수변활력거점 일대</span>
+      </div>
+    </div>
   </section>
 
-  <section class="info">
-    <div class="info-inner">
-      <p class="info-label">Event Info</p>
-      <p class="info-title">해질녘 성북천을 따라,<br>책과 사람이 만나는 자리</p>
+  <nav class="menu">
+    <a href="#booth">부스</a>
+    <!-- TODO: 실제 설문조사 폼 링크로 교체 -->
+    <a href="#" target="_blank" rel="noopener">설문조사</a>
+    <!-- TODO: 실제 오시는길(네이버/카카오맵) 링크로 교체 -->
+    <a href="#" target="_blank" rel="noopener">오시는길</a>
+    <a href="#layout">배치도</a>
+  </nav>
 
-      <ul class="fact-list">
-        <li>
-          <span class="fact-key">일시</span>
-          <span class="fact-val">2026. 9. 6.(일) 15:00 – 20:00</span>
-        </li>
-        <li>
-          <span class="fact-key">장소</span>
-          <span class="fact-val">성북구청 앞 바람마당교, 성북천 수력활력거점 일대</span>
-        </li>
-        <li>
-          <span class="fact-key">주최</span>
-          <span class="fact-val">성북구
-            <span class="sub">주관 · 성북문화재단</span>
-          </span>
-        </li>
-      </ul>
+  <section class="block" id="booth">
+    <div class="block-inner">
+      <h2 class="block-label">부스 &amp; 프로그램</h2>
 
-      <div class="cta-wrap">
-        <a class="btn btn-primary" href="https://www.sblib.seoul.kr/library/menu/10009/bbs/20010/bbsArticleDetail.do" target="_blank" rel="noopener">
-          상세 안내 보기 →
-        </a>
+      <div class="sub-card">
+        <p class="sub-title">체험부스</p>
+        <p>성북구립도서관 네트워크 유관기관</p>
+      </div>
+
+      <div class="sub-card">
+        <p class="sub-title">공연</p>
+        <p>15:00 대학생 버스킹<br>18:00 앙상블, 아카펠라</p>
+      </div>
+
+      <div class="sub-card">
+        <p class="sub-title">야외도서관</p>
+        <p>성북천에 펼쳐지는 가을 책 한 권</p>
+      </div>
+
+      <div class="sub-card">
+        <p class="sub-title">이벤트</p>
+        <p>발길 닿는 곳마다 손에 남은 즐거움</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="layout">
+    <div class="block-inner">
+      <h2 class="block-label">현장 배치도</h2>
+      <div class="placeholder-box">
+        배치도 이미지가 준비되면 이 영역에 삽입됩니다.
       </div>
     </div>
   </section>
 
   <footer>
-    <p class="name">2026 성북 책모꼬지</p>
-    <p>2026. 9. 6.(일) 15:00~20:00 · 성북구청 앞 바람마당교, 성북천 수력활력거점 일대</p>
+    <p class="name">2026 성북 북페스티벌</p>
+    <p>2026. 9. 6.(일) 15:00~20:00 · 성북구청 앞 바람마당교, 성북천 수변활력거점 일대</p>
     <p>주최 성북구 · 주관 성북문화재단</p>
   </footer>
 
