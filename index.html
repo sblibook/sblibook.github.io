@@ -56,14 +56,11 @@
   .hero .deco-coffeecup{ bottom:-2%; right:3%; width:clamp(64px,10vw,116px); transform:rotate(9deg); opacity:.92; }
   .hero-content{ position:relative; z-index:2; }
 
-  .badge{
-    display:inline-block; background:var(--badge-background); color:var(--page-text);
-    font-weight:800; font-size:clamp(.85rem,2vw,1.05rem); padding:.5rem 1.3rem;
-    border-radius:999px; border:1px solid var(--page-text); letter-spacing:.02em; margin-bottom:1.6rem;
-  }
-  h1{
-    font-weight:900; font-size:clamp(2rem,8.5vw,4.6rem); line-height:1.1;
-    letter-spacing:-0.02em; color:var(--page-text); white-space:nowrap;
+  .hero-title-img{
+    display:block;
+    width: min(94vw, 760px);
+    height:auto;
+    margin: 0 auto;
   }
   .facts{
     margin-top:2.6rem; display:inline-flex; flex-direction:column; gap:.55rem; text-align:left;
@@ -161,6 +158,7 @@
   .booth-desc{ list-style:none; }
   .booth-desc li{ font-size:.9rem; line-height:1.65; color:#3a332a; margin-bottom:.4rem; }
   .booth-desc li:last-child{ margin-bottom:0; }
+  .li-title{ font-weight:800; color:var(--page-text); }
   .time-chip{
     display:inline-block; background:var(--section-accent); color:#fff; font-weight:700;
     font-size:.72rem; padding:.12rem .5rem; border-radius:999px; margin-right:.4rem;
@@ -263,8 +261,7 @@
     <img class="deco deco-flower" src="images/deco/flower.png" alt="" aria-hidden="true">
     <img class="deco deco-coffeecup" src="images/deco/coffeecup.png" alt="" aria-hidden="true">
     <div class="hero-content">
-      <span class="badge">2026 책모꼬지</span>
-      <h1>성북 북페스티벌</h1>
+      <img class="hero-title-img" src="images/hero-title.png" alt="2026 책모꼬지 성북 북페스티벌">
       <div class="facts">
         <div class="row"><span class="tag">일시</span><span class="val">2026. 9. 6.(일) 15:00 – 20:00</span></div>
         <div class="row"><span class="tag">장소</span><span class="val">성북구청 앞 바람마당교,<br>성북천 수변활력거점 일대</span></div>
@@ -365,8 +362,8 @@
         <div class="booth-body">
           <p class="booth-title">히히살롱 <span class="booth-org">&amp; 성북정보도서관</span></p>
           <ul class="booth-desc">
-            <li><span class="time-chip">15:00</span>1! 2! 3! (성북탄소중립배움터) — 1인 이끼 정원으로 3도 낮춰요, 이끼 관찰 및 이끼정원 만들기</li>
-            <li><span class="time-chip">18:00</span>비즈끈갈피 만들기 (책의기분) — 비즈로 만드는 나만의 책갈피</li>
+            <li><span class="time-chip">15:00</span><span class="li-title">1! 2! 3! <span class="note-inline">성북탄소중립배움터</span></span> — 1인 이끼 정원으로 3도 낮춰요, 이끼 관찰 및 이끼정원 만들기</li>
+            <li><span class="time-chip">18:00</span><span class="li-title">비즈끈갈피 만들기 <span class="note-inline">책의기분</span></span> — 비즈로 만드는 나만의 책갈피</li>
             <li>성북구립도서관 네트워크 &lt;히히살롱&gt; 소개 및 홍보 전시</li>
           </ul>
         </div>
@@ -377,7 +374,7 @@
         <div class="booth-body">
           <p class="booth-title">우리랑 <span class="booth-org">&amp; 아리랑도서관</span></p>
           <ul class="booth-desc">
-            <li>파우치 꾸미기 — 아리랑도서관 네트워크 &lt;우리랑&gt;과 함께하는 청소년의 푸른 바다 '보이콧' 부스! 나만의 파우치를 직접 꾸며보세요.</li>
+            <li><span class="li-title">파우치 꾸미기</span> — 아리랑도서관 네트워크 &lt;우리랑&gt;과 함께하는 청소년의 푸른 바다 '보이콧' 부스! 나만의 파우치를 직접 꾸며보세요.</li>
           </ul>
         </div>
       </div>
@@ -387,7 +384,7 @@
         <div class="booth-body">
           <p class="booth-title">동네꿀딴지 <span class="booth-org">&amp; 종암동새날도서관</span></p>
           <ul class="booth-desc">
-            <li>책설기 문진 만들기 — '손이말하는테이블'과 따뜻한 수어를 배우고, 성북구립도서관 마스코트 '책설기' 문진을 나만의 색으로 예쁘게 색칠해 보는 종암동새날도서관 네트워크 &lt;동네꿀단지&gt; 부스입니다.</li>
+            <li><span class="li-title">책설기 문진 만들기</span> — '손이말하는테이블'과 따뜻한 수어를 배우고, 성북구립도서관 마스코트 '책설기' 문진을 나만의 색으로 예쁘게 색칠해 보는 종암동새날도서관 네트워크 &lt;동네꿀단지&gt; 부스입니다.</li>
           </ul>
         </div>
       </div>
@@ -398,8 +395,8 @@
           <p class="booth-title">석이네 × 쓰담쓰담 <span class="booth-org">&amp; 석관동미리내도서관</span></p>
           <ul class="booth-desc">
             <li>읽고, 줍고 함께 만드는 동네</li>
-            <li><span class="time-chip">15:00</span>동낵: 동네스낵(석이네) — 동네에서 수거한 쓰레기를 스낵으로 교환해주는 환경 캠페인</li>
-            <li><span class="time-chip">17:00</span>다온책방(쓰담쓰담) — 성북구 역대 한 책 전시 및 체험</li>
+            <li><span class="time-chip">15:00</span><span class="li-title">동낵: 동네스낵 <span class="note-inline">석이네</span></span> — 동네에서 수거한 쓰레기를 스낵으로 교환해주는 환경 캠페인</li>
+            <li><span class="time-chip">17:00</span><span class="li-title">다온책방 <span class="note-inline">쓰담쓰담</span></span> — 성북구 역대 한 책 전시 및 체험</li>
           </ul>
         </div>
       </div>
@@ -409,7 +406,7 @@
         <div class="booth-body">
           <p class="booth-title">달빛청년넷 <span class="booth-org">&amp; 달빛마루도서관</span></p>
           <ul class="booth-desc">
-            <li>미니 아카이브 꾸미기 — 작은 아카이브 꾸러미 만들기, 대형 마을지도에 스탬프·스티커로 동네 이야기 꾸미기</li>
+            <li><span class="li-title">미니 아카이브 꾸미기</span> — 작은 아카이브 꾸러미 만들기, 대형 마을지도에 스탬프·스티커로 동네 이야기 꾸미기</li>
           </ul>
         </div>
       </div>
@@ -419,7 +416,7 @@
         <div class="booth-body">
           <p class="booth-title">예술로26길 <span class="booth-org">&amp; 청수·정릉도서관</span></p>
           <ul class="booth-desc">
-            <li>예술로26길 맛보기 — 정릉동 예술로26길 공방과 함께 공예활동 체험하기 &amp; 공방전시 관람</li>
+            <li><span class="li-title">예술로26길 맛보기</span> — 정릉동 예술로26길 공방과 함께 공예활동 체험하기 &amp; 공방전시 관람</li>
           </ul>
         </div>
       </div>
@@ -430,7 +427,7 @@
           <p class="booth-title">살롱드장위 with 장곡시장 <span class="booth-org">&amp; 장위행복누림·오동숲속도서관</span></p>
           <ul class="booth-desc">
             <li><span class="time-chip">15:00</span>책설기 바람떡 빚기</li>
-            <li><span class="time-chip">17:30</span>키링 만들기 — 장곡시장 &lt;써니쏘잉&gt;, &lt;인연케이크&gt;와 협력하여 성북구립도서관 마스코트 '책설기'와 함께하는 달콤한 바람떡과 귀여운 키링을 직접 만드는 지역 상생 프로그램</li>
+            <li><span class="time-chip">17:30</span><span class="li-title">키링 만들기</span> — 장곡시장 &lt;써니쏘잉&gt;, &lt;인연케이크&gt;와 협력하여 성북구립도서관 마스코트 '책설기'와 함께하는 달콤한 바람떡과 귀여운 키링을 직접 만드는 지역 상생 프로그램</li>
           </ul>
         </div>
       </div>
@@ -440,7 +437,7 @@
         <div class="booth-body">
           <p class="booth-title">한성대학교 문헌정보전공</p>
           <ul class="booth-desc">
-            <li>나만의 책 향기 만들기 — 책을 읽고 느낀 감정을 향기로 표현해보세요! 마음에 남는 구절을 적고, 은은한 아로마 북사쉐를 만들며 나만의 특별한 책 향기를 완성해 가실 수 있습니다.</li>
+            <li><span class="li-title">나만의 책 향기 만들기</span> — 책을 읽고 느낀 감정을 향기로 표현해보세요! 마음에 남는 구절을 적고, 은은한 아로마 북사쉐를 만들며 나만의 특별한 책 향기를 완성해 가실 수 있습니다.</li>
           </ul>
         </div>
       </div>
@@ -450,7 +447,7 @@
         <div class="booth-body">
           <p class="booth-title">동덕여자대학교 문헌정보학과 사심가득</p>
           <ul class="booth-desc">
-            <li>나만의 북 클리커 만들기 — 좋아하는 책 속 문장을 고르고, 그 문장에 어울리는 파츠로 북 클리커를 만들어 보세요. 나만의 독서 굿즈로 간직할 수 있어요.</li>
+            <li><span class="li-title">나만의 북 클리커 만들기</span> — 좋아하는 책 속 문장을 고르고, 그 문장에 어울리는 파츠로 북 클리커를 만들어 보세요. 나만의 독서 굿즈로 간직할 수 있어요.</li>
           </ul>
         </div>
       </div>
@@ -468,8 +465,8 @@
         <div class="booth-body">
           <p class="booth-title">문화공간이육사·한국근현대문학관</p>
           <ul class="booth-desc">
-            <li>문학 체험 활동 — 이육사 시를 감상하고 시어 스티커를 활용한 아크릴 키링 만들기</li>
-            <li>꽃 비즈 책갈피 만들기 – 꽃말과 함께 만나는 성북 문인 이야기</li>
+            <li><span class="li-title">문학 체험 활동</span> — 이육사 시를 감상하고 시어 스티커를 활용한 아크릴 키링 만들기</li>
+            <li><span class="li-title">꽃 비즈 책갈피 만들기</span> — 꽃말과 함께 만나는 성북 문인 이야기</li>
           </ul>
         </div>
       </div>
@@ -487,7 +484,7 @@
         <div class="booth-body">
           <p class="booth-title">보문보물 <span class="booth-org">&amp; 보문숲길도서관</span></p>
           <ul class="booth-desc">
-            <li>찾아봐요 보문보물! — 어린이는 커다란 보문보물 지도 퍼즐 맞추기, 성인은 보물(기관·단체)에 대한 퀴즈 맞혀 보문보물 지도를 완성해주세요!</li>
+            <li><span class="li-title">찾아봐요 보문보물!</span> — 어린이는 커다란 보문보물 지도 퍼즐 맞추기, 성인은 보물 <span class="note-inline">기관·단체</span>에 대한 퀴즈 맞혀 보문보물 지도를 완성해주세요!</li>
           </ul>
         </div>
       </div>
@@ -497,8 +494,8 @@
         <div class="booth-body">
           <p class="booth-title">길빛로52 <span class="booth-org">&amp; 성북길빛도서관</span></p>
           <ul class="booth-desc">
-            <li><span class="time-chip">15:00</span>폴라로이드 꾸미기 — 점자 스티커로 폴라로이드 꾸미기 (동덕여자대학교 동아리 북덕)</li>
-            <li><span class="time-chip">17:00</span>제로웨이스트샵 일상공감 — 책, 지구, 사람을 향하는 메시지 실크스크린 찍기</li>
+            <li><span class="time-chip">15:00</span><span class="li-title">폴라로이드 꾸미기</span> — 점자 스티커로 폴라로이드 꾸미기 <span class="note-inline">동덕여자대학교 동아리 북덕</span></li>
+            <li><span class="time-chip">17:00</span><span class="li-title">제로웨이스트샵 일상공감</span> — 책, 지구, 사람을 향하는 메시지 실크스크린 찍기</li>
           </ul>
         </div>
       </div>
@@ -509,7 +506,7 @@
           <p class="booth-title">글빛클라우드 <span class="booth-org">&amp; 글빛·서경로꿈마루도서관</span></p>
           <ul class="booth-desc">
             <li>놀면서 알아보는 ICT</li>
-            <li>Play1. 알파고(AI)와 함께하는 오목 한 판!</li>
+            <li>Play1. 알파고 <span class="note-inline">AI</span>와 함께하는 오목 한 판!</li>
             <li>Play2. 놀면서 배우는 레트로 코딩!</li>
           </ul>
         </div>
@@ -521,8 +518,8 @@
           <p class="booth-title">한책추진단 운영위원회 아동분과 <span class="booth-org">&amp; 아리랑어린이도서관</span></p>
           <ul class="booth-desc">
             <li>어린이 한 책 ZONE</li>
-            <li>체험 – 퀴즈 맞추기 및 컬러링+서평지, 최종후보도서 낭독</li>
-            <li>전시 및 설문 – 2026 어린이 한 책 최종후보도서 4권 전시, 인식/경험 조사</li>
+            <li><span class="li-title">체험</span> — 퀴즈 맞추기 및 컬러링+서평지, 최종후보도서 낭독</li>
+            <li><span class="li-title">전시 및 설문</span> — 2026 어린이 한 책 최종후보도서 4권 전시, 인식/경험 조사</li>
           </ul>
         </div>
       </div>
@@ -544,7 +541,7 @@
         <div class="booth-body">
           <p class="booth-title">한책추진단 운영위원회 주민분과 <span class="booth-org">&amp; 해오름도서관</span></p>
           <ul class="booth-desc">
-            <li>함께 즐겨요, 한 책! — 성북구 한 책을 전시와 퀴즈로 즐기고, 마음에 남은 한 문장을 필사하며 책과 함께하는 특별한 시간을 만들어 보세요.</li>
+            <li><span class="li-title">함께 즐겨요, 한 책!</span> — 성북구 한 책을 전시와 퀴즈로 즐기고, 마음에 남은 한 문장을 필사하며 책과 함께하는 특별한 시간을 만들어 보세요.</li>
           </ul>
         </div>
       </div>
@@ -574,11 +571,11 @@
         <p class="event-title">설문이벤트</p>
         <div class="event-flow">
           <a class="event-step" href="http://pf.kakao.com/_xnvxcxoxj" target="_blank" rel="noopener">
-            <span class="step-num">1</span><span class="step-text">'성북구립도서관' 카카오톡 채널 추가<span class="ext-icon">↗</span> </span>
+            <span class="step-num">1</span><span class="step-text">'성북구립도서관' 카카오톡 채널 추가<span class="ext-icon">↗</span> <br><small>[QR / 라벨: 채널추가]</small></span>
           </a>
           <span class="step-arrow">→</span>
           <a class="event-step" href="https://forms.gle/K33oqQBnRtGmAzyP6" target="_blank" rel="noopener">
-            <span class="step-num">2</span><span class="step-text">책모꼬지 만족도 설문조사 참여<span class="ext-icon">↗</span> </span>
+            <span class="step-num">2</span><span class="step-text">책모꼬지 만족도 설문조사 참여<span class="ext-icon">↗</span> <br><small>[QR / 라벨: 설문]</small></span>
           </a>
           <span class="step-arrow">→</span>
           <div class="event-step"><span class="step-num">3</span><span class="step-text">[운영부스]에서 인증하고 성북구립도서관 굿즈 수령</span></div>
