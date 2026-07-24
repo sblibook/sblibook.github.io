@@ -52,7 +52,6 @@
   }
   .hero .deco-pinkstar{ top:6%; right:8%; width:clamp(38px,6vw,64px); transform:rotate(8deg); }
   .hero .deco-ministar{ top:12%; left:6%; width:clamp(34px,5.5vw,58px); transform:rotate(-10deg); }
-  .hero .deco-flower{ bottom:-6%; left:2%; width:clamp(70px,11vw,130px); transform:rotate(-6deg); opacity:.92; }
   .hero .deco-coffeecup{ bottom:1%; right:3%; width:clamp(64px,10vw,116px); transform:rotate(9deg); opacity:.92; }
   .hero-content{ position:relative; z-index:2; }
 
@@ -60,11 +59,13 @@
   .deco2{ position:absolute; pointer-events:none; user-select:none; z-index:1; opacity:.85; }
   .hero .deco2-star-orange{ top:32%; left:3%; width:clamp(26px,4vw,42px); transform:rotate(-16deg); }
   .hero .deco2-leaf-yellow{ top:8%; left:38%; width:clamp(22px,3.4vw,36px); transform:rotate(20deg); opacity:.7; }
+  .hero .deco2-leaf-yellow-b{ top:44%; right:14%; width:clamp(18px,2.8vw,28px); transform:rotate(-24deg); opacity:.6; }
 
   #timeline .deco2-star-pink2{ top:10%; left:5%; width:clamp(28px,4.5vw,46px); transform:rotate(-8deg); }
   #timeline .deco2-note-green{ top:34%; right:14%; width:clamp(18px,2.8vw,28px); transform:rotate(10deg); }
+  #timeline .deco2-note-green-b{ bottom:5%; left:4%; width:clamp(20px,3.2vw,32px); transform:rotate(-12deg); }
+  #timeline .deco2-note-green-c{ bottom:12%; left:11%; width:clamp(15px,2.4vw,22px); transform:rotate(18deg); opacity:.7; }
   #timeline .deco2-note-orange{ bottom:8%; right:8%; width:clamp(20px,3vw,32px); transform:rotate(-14deg); }
-  #timeline .deco2-notepad{ bottom:4%; left:4%; width:clamp(34px,5.5vw,56px); transform:rotate(6deg); opacity:.7; }
   #timeline .deco2-leaf-yellow-c{ top:6%; right:26%; width:clamp(18px,2.8vw,26px); transform:rotate(14deg); opacity:.6; }
 
   #booth .deco2-puzzle{ top:3%; left:2%; width:clamp(36px,5.5vw,58px); transform:rotate(-10deg); opacity:.75; }
@@ -87,7 +88,7 @@
     position:static; display:inline-block;
   }
   .block-label-row .deco2-lamp-inline{
-    width:clamp(38px,5.8vw,58px); transform:rotate(-13deg); opacity:.95;
+    width:clamp(38px,5.8vw,58px); transform:rotate(-13deg); opacity:.95; margin-left:auto;
   }
 
   .hero-title-img{
@@ -147,14 +148,14 @@
   #event{ background:var(--page-background); }
   #layout{ background:var(--card-background); }
 
-  #booth .deco-glasses{ bottom:1%; right:-2%; width:clamp(80px,12vw,150px); transform:rotate(6deg); opacity:.85; }
+  #booth .deco-glasses{ bottom:2%; right:6%; width:clamp(56px,8.5vw,104px); transform:rotate(6deg); opacity:.85; }
   #timeline .deco-guitar{ top:5%; right:4%; width:clamp(56px,9vw,100px); transform:rotate(10deg); opacity:.9; }
 
   /* 1번 부스 카드 옆 책더미 장식 */
   #b01{ position:relative; overflow:visible; }
   #b01 .deco-bookstack-near{
     position:absolute;
-    top:-20px; right:-14px;
+    top:-34px; right:-14px;
     width:clamp(46px,7vw,64px);
     transform:rotate(-6deg);
     z-index:3;
@@ -329,7 +330,6 @@
   <section class="hero" id="top">
     <img class="deco deco-pinkstar" src="images/deco/pinkstar.png" alt="" aria-hidden="true">
     <img class="deco deco-ministar" src="images/deco/ministar.png" alt="" aria-hidden="true">
-    <img class="deco deco-flower" src="images/deco/flower.png" alt="" aria-hidden="true">
     <img class="deco deco-coffeecup" src="images/deco/coffeecup.png" alt="" aria-hidden="true">
     <img class="deco2 deco2-star-orange" src="images/deco2/star-orange.png" alt="" aria-hidden="true">
     <img class="deco2 deco2-leaf-yellow" src="images/deco2/leaf-yellow.png" alt="" aria-hidden="true">
@@ -344,7 +344,7 @@
   </section>
 
   <div class="menu-wrap">
-    <p class="menu-hint">메뉴를 누르면 해당 페이지로 이동해요.</p>
+    <p class="menu-hint">메뉴를 누르면 해당 페이지로 이동해요</p>
     <div class="menu-row">
       <a class="menu-btn menu-btn--booth" href="#booth">부스</a>
       <a class="menu-btn menu-btn--timeline" href="#timeline">공연</a>
@@ -365,8 +365,9 @@
     <img class="deco deco-guitar" src="images/deco/guitar.png" alt="" aria-hidden="true">
     <img class="deco2 deco2-star-pink2" src="images/deco2/star-pink2.png" alt="" aria-hidden="true">
     <img class="deco2 deco2-note-green" src="images/deco2/note-green.png" alt="" aria-hidden="true">
+    <img class="deco2 deco2-note-green-b" src="images/deco2/note-green.png" alt="" aria-hidden="true">
+    <img class="deco2 deco2-note-green-c" src="images/deco2/note-green.png" alt="" aria-hidden="true">
     <img class="deco2 deco2-note-orange" src="images/deco2/note-orange.png" alt="" aria-hidden="true">
-    <img class="deco2 deco2-notepad" src="images/deco2/notepad.png" alt="" aria-hidden="true">
     <img class="deco2 deco2-leaf-yellow-c" src="images/deco2/leaf-yellow.png" alt="" aria-hidden="true">
     <div class="block-inner">
       <div class="block-label-row"><h2 class="block-label">일정</h2></div>
