@@ -278,11 +278,33 @@
     .booth-index a{ font-size:.76rem; padding:.6rem .5rem; min-height:2.8rem; }
   }
   @media (prefers-reduced-motion: reduce){ .menu-btn{ transition:none; } }
+
+  /* ---------- BACK TO TOP ---------- */
+  .back-to-top{
+    position:fixed;
+    right:1.4rem;
+    bottom:1.4rem;
+    width:46px; height:46px;
+    border-radius:50%;
+    background:var(--page-text);
+    color:var(--page-background);
+    border:2px solid var(--page-background);
+    display:flex; align-items:center; justify-content:center;
+    font-size:1.3rem; font-weight:800; line-height:1;
+    text-decoration:none;
+    z-index:50;
+    transition:transform .15s ease;
+  }
+  .back-to-top:hover{ transform:translateY(-3px); }
+  .back-to-top:active{ transform:translateY(0); }
+  @media (max-width:480px){
+    .back-to-top{ width:42px; height:42px; right:1rem; bottom:1rem; font-size:1.15rem; }
+  }
 </style>
 </head>
 <body>
 
-  <section class="hero">
+  <section class="hero" id="top">
     <img class="deco deco-pinkstar" src="images/deco/pinkstar.png" alt="" aria-hidden="true">
     <img class="deco deco-ministar" src="images/deco/ministar.png" alt="" aria-hidden="true">
     <img class="deco deco-flower" src="images/deco/flower.png" alt="" aria-hidden="true">
@@ -372,6 +394,7 @@
         <img class="deco-bookstack" src="images/deco/bookstack.png" alt="" aria-hidden="true">
       </div>
       <p class="event-headcopy">성북구립도서관 네트워크, 유관기관과 함께하는 체험부스</p>
+      <p class="menu-hint">번호를 누르면 해당 부스로 이동해요</p>
 
 
       <div class="booth-index">
@@ -672,6 +695,8 @@
       <p>주최| 성북구&nbsp;&nbsp;&nbsp;주관| 성북문화재단</p>
     </div>
   </footer>
+
+  <a class="back-to-top" href="#top" aria-label="맨 위로 이동">↑</a>
 
   <script>
     document.querySelectorAll('.booth-index a').forEach(function(link){
