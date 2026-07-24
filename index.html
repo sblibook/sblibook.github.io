@@ -75,6 +75,10 @@
 
   /* ---------- MENU ---------- */
   .menu-wrap{ background:var(--page-background); border-bottom:4px solid var(--page-text); padding:1.8rem 6vw 2rem; }
+  .menu-hint{
+    text-align:center; font-size:.78rem; color:#8a8069; letter-spacing:.01em;
+    margin-bottom:1.1rem;
+  }
   .menu-row{ display:flex; flex-wrap:wrap; justify-content:center; gap:.7rem; }
   .menu-row + .menu-row{ margin-top:.7rem; }
   .menu-btn{
@@ -111,7 +115,7 @@
   #layout{ background:var(--card-background); }
 
   #booth .deco-glasses{ bottom:1%; right:-2%; width:clamp(80px,12vw,150px); transform:rotate(6deg); opacity:.85; }
-  #booth .deco-guitar{ top:4%; right:2%; width:clamp(52px,8vw,92px); transform:rotate(10deg); opacity:.9; }
+  #timeline .deco-guitar{ top:5%; right:4%; width:clamp(56px,9vw,100px); transform:rotate(10deg); opacity:.9; }
 
   .sub-card{
     background:var(--page-background); border:2.5px solid var(--page-text); border-radius:14px;
@@ -270,7 +274,7 @@
   </section>
 
   <div class="menu-wrap">
-    <p class="block-sub">메뉴를 누르면 해당 페이지로 이동합니다.</p>
+    <p class="menu-hint">메뉴를 누르면 해당 페이지로 이동해요</p>
     <div class="menu-row">
       <a class="menu-btn menu-btn--booth" href="#booth">부스</a>
       <a class="menu-btn menu-btn--timeline" href="#timeline">공연</a>
@@ -288,6 +292,7 @@
 
   <!-- 구간3: 타임라인 -->
   <section class="block" id="timeline">
+    <img class="deco deco-guitar" src="images/deco/guitar.png" alt="" aria-hidden="true">
     <div class="block-inner">
       <div class="block-label-row"><h2 class="block-label">일정</h2></div>
       <p class="block-sub">낮부터 밤까지 성북 책모꼬지와 함께!</p>
@@ -328,7 +333,6 @@
 
   <!-- 구간4: 부스 운영 내용 -->
   <section class="block" id="booth">
-    <img class="deco deco-guitar" src="images/deco/guitar.png" alt="" aria-hidden="true">
     <img class="deco deco-glasses" src="images/deco/glasses.png" alt="" aria-hidden="true">
     <div class="block-inner">
       <div class="block-label-row">
@@ -340,21 +344,21 @@
 
 
       <div class="booth-index">
-        <a href="#b01" title="히히살롱">1</a>
-        <a href="#b02" title="우리랑">2</a>
-        <a href="#b03" title="동네꿀딴지">3</a>
-        <a href="#b04" title="석이네 × 쓰담쓰담">4</a>
-        <a href="#b05" title="달빛청년넷">5</a>
+        <a href="#b01" title="우리랑">1</a>
+        <a href="#b02" title="보문숲길도서관">2</a>
+        <a href="#b03" title="성북길빛도서관">3</a>
+        <a href="#b04" title="살롱드장위">4</a>
+        <a href="#b05" title="동네꿀딴지">5</a>
         <a href="#b06" title="예술로26길">6</a>
-        <a href="#b07" title="살롱드장위">7</a>
+        <a href="#b07" title="글빛·서경로꿈마루도서관">7</a>
         <a href="#b08" title="한성대학교 문헌정보전공">8</a>
         <a href="#b09" title="동덕여자대학교 사심가득">9</a>
         <a href="#b10" title="새마을문고">10</a>
         <a href="#b11" title="문화공간이육사·한국근현대문학관">11</a>
         <a href="#b12" title="작은도서관네트워크">12</a>
-        <a href="#b13" title="보문숲길도서관">13</a>
-        <a href="#b14" title="성북길빛도서관">14</a>
-        <a href="#b15" title="글빛·서경로꿈마루도서관">15</a>
+        <a href="#b13" title="히히살롱">13</a>
+        <a href="#b14" title="석이네 × 쓰담쓰담">14</a>
+        <a href="#b15" title="달빛청년넷">15</a>
         <a href="#b16" title="아리랑어린이도서관">16</a>
         <a href="#b17" title="성북어린이청소년·월곡꿈그림도서관">17</a>
         <a href="#b18" title="해오름도서관">18</a>
@@ -363,18 +367,6 @@
       <div class="booth-card" id="b01">
         <div class="booth-num">01</div>
         <div class="booth-body">
-          <p class="booth-title">히히살롱 <span class="booth-org">&amp; 성북정보도서관</span></p>
-          <ul class="booth-desc">
-            <li><span class="time-chip">15:00</span><span class="li-title">1! 2! 3! <span class="note-inline">성북탄소중립배움터</span></span> — 1인 이끼 정원으로 3도 낮춰요, 이끼 관찰 및 이끼정원 만들기</li>
-            <li><span class="time-chip">18:00</span><span class="li-title">비즈끈갈피 만들기 <span class="note-inline">책의기분</span></span> — 비즈로 만드는 나만의 책갈피</li>
-            <li>성북구립도서관 네트워크 &lt;히히살롱&gt; 소개 및 홍보 전시</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="booth-card" id="b02">
-        <div class="booth-num">02</div>
-        <div class="booth-body">
           <p class="booth-title">우리랑 <span class="booth-org">&amp; 아리랑도서관</span></p>
           <ul class="booth-desc">
             <li><span class="li-title">파우치 꾸미기<br></span>아리랑도서관 네트워크 &lt;우리랑&gt;과 함께하는 청소년의 푸른 바다 '보이콧' 부스! 나만의 파우치를 직접 꾸며보세요.</li>
@@ -382,12 +374,23 @@
         </div>
       </div>
 
+      <div class="booth-card" id="b02">
+        <div class="booth-num">02</div>
+        <div class="booth-body">
+          <p class="booth-title">보문보물 <span class="booth-org">&amp; 보문숲길도서관</span></p>
+          <ul class="booth-desc">
+            <li><span class="li-title">찾아봐요 보문보물!<br></span>어린이는 커다란 보문보물 지도 퍼즐 맞추기, 성인은 보물 <span class="note-inline">(기관·단체)</span>에 대한 퀴즈 맞혀 보문보물 지도를 완성해주세요!</li>
+          </ul>
+        </div>
+      </div>
+
       <div class="booth-card" id="b03">
         <div class="booth-num">03</div>
         <div class="booth-body">
-          <p class="booth-title">동네꿀딴지 <span class="booth-org">&amp; 종암동새날도서관</span></p>
+          <p class="booth-title">길빛로52 <span class="booth-org">&amp; 성북길빛도서관</span></p>
           <ul class="booth-desc">
-            <li><span class="li-title">책설기 문진 만들기<br></span>'손이말하는테이블'과 따뜻한 수어를 배우고, 성북구립도서관 마스코트 '책설기' 문진을 나만의 색으로 예쁘게 색칠해 보는 종암동새날도서관 네트워크 &lt;동네꿀단지&gt; 부스입니다.</li>
+            <li><span class="time-chip">15:00</span><span class="li-title">폴라로이드 꾸미기</span> — 점자 스티커로 폴라로이드 꾸미기 <span class="note-inline">동덕여자대학교 동아리 북덕</span></li>
+            <li><span class="time-chip">17:00</span><span class="li-title">책, 지구, 사람을 향하는 메시지 실크스크린 찍기 <span class="note-inline">제로웨이스트샵 일상공감</span></li>
           </ul>
         </div>
       </div>
@@ -395,11 +398,10 @@
       <div class="booth-card" id="b04">
         <div class="booth-num">04</div>
         <div class="booth-body">
-          <p class="booth-title">석이네 × 쓰담쓰담 <span class="booth-org">&amp; 석관동미리내도서관</span></p>
+          <p class="booth-title">살롱드장위 with 장곡시장 <span class="booth-org">&amp; 장위행복누림·오동숲속도서관</span></p>
           <ul class="booth-desc">
-            <li><span class="li-title">읽고, 줍고 함께 만드는 동네</span></li>
-            <li><span class="time-chip">15:00</span><span class="li-title">동낵: 동네스낵 <span class="note-inline">석이네</span></span> — 동네에서 수거한 쓰레기를 스낵으로 교환해주는 환경 캠페인</li>
-            <li><span class="time-chip">17:00</span><span class="li-title">다온책방 <span class="note-inline">쓰담쓰담</span></span> — 성북구 역대 한 책 전시 및 체험</li>
+            <li><span class="time-chip">15:00</span><span class="li-title">책설기 바람떡 빚기</span></li>
+            <li><span class="time-chip">17:30</span><span class="li-title">키링 만들기</span><br>장곡시장 &lt;써니쏘잉&gt;, &lt;인연케이크&gt;와 협력하여 성북구립도서관 마스코트 '책설기'와 함께하는 달콤한 바람떡과 귀여운 키링을 직접 만드는 지역 상생 프로그램</li>
           </ul>
         </div>
       </div>
@@ -407,9 +409,9 @@
       <div class="booth-card" id="b05">
         <div class="booth-num">05</div>
         <div class="booth-body">
-          <p class="booth-title">달빛청년넷 <span class="booth-org">&amp; 달빛마루도서관</span></p>
+          <p class="booth-title">동네꿀딴지 <span class="booth-org">&amp; 종암동새날도서관</span></p>
           <ul class="booth-desc">
-            <li><span class="li-title">미니 아카이브 꾸미기<br></span>작은 아카이브 꾸러미 만들기, 대형 마을지도에 스탬프·스티커로 동네 이야기 꾸미기</li>
+            <li><span class="li-title">책설기 문진 만들기<br></span>'손이말하는테이블'과 따뜻한 수어를 배우고, 성북구립도서관 마스코트 '책설기' 문진을 나만의 색으로 예쁘게 색칠해 보는 종암동새날도서관 네트워크 &lt;동네꿀단지&gt; 부스입니다.</li>
           </ul>
         </div>
       </div>
@@ -427,10 +429,11 @@
       <div class="booth-card" id="b07">
         <div class="booth-num">07</div>
         <div class="booth-body">
-          <p class="booth-title">살롱드장위 with 장곡시장 <span class="booth-org">&amp; 장위행복누림·오동숲속도서관</span></p>
+          <p class="booth-title">글빛클라우드 <span class="booth-org">&amp; 글빛·서경로꿈마루도서관</span></p>
           <ul class="booth-desc">
-            <li><span class="time-chip">15:00</span><span class="li-title">책설기 바람떡 빚기</span></li>
-            <li><span class="time-chip">17:30</span><span class="li-title">키링 만들기</span><br>장곡시장 &lt;써니쏘잉&gt;, &lt;인연케이크&gt;와 협력하여 성북구립도서관 마스코트 '책설기'와 함께하는 달콤한 바람떡과 귀여운 키링을 직접 만드는 지역 상생 프로그램</li>
+            <li><span class="li-title">놀면서 알아보는 ICT</span></li>
+            <li><span class="li-title">Play1.</span>알파고 AI와 함께하는 오목 한 판!</li>
+            <li><span class="li-title">Play2.</span> 놀면서 배우는 레트로 코딩!</li>
           </ul>
         </div>
       </div>
@@ -485,9 +488,11 @@
       <div class="booth-card" id="b13">
         <div class="booth-num">13</div>
         <div class="booth-body">
-          <p class="booth-title">보문보물 <span class="booth-org">&amp; 보문숲길도서관</span></p>
+          <p class="booth-title">히히살롱 <span class="booth-org">&amp; 성북정보도서관</span></p>
           <ul class="booth-desc">
-            <li><span class="li-title">찾아봐요 보문보물!<br></span>어린이는 커다란 보문보물 지도 퍼즐 맞추기, 성인은 보물 <span class="note-inline">(기관·단체)</span>에 대한 퀴즈 맞혀 보문보물 지도를 완성해주세요!</li>
+            <li><span class="time-chip">15:00</span><span class="li-title">1! 2! 3! <span class="note-inline">성북탄소중립배움터</span></span> — 1인 이끼 정원으로 3도 낮춰요, 이끼 관찰 및 이끼정원 만들기</li>
+            <li><span class="time-chip">18:00</span><span class="li-title">비즈끈갈피 만들기 <span class="note-inline">책의기분</span></span> — 비즈로 만드는 나만의 책갈피</li>
+            <li>성북구립도서관 네트워크 &lt;히히살롱&gt; 소개 및 홍보 전시</li>
           </ul>
         </div>
       </div>
@@ -495,10 +500,11 @@
       <div class="booth-card" id="b14">
         <div class="booth-num">14</div>
         <div class="booth-body">
-          <p class="booth-title">길빛로52 <span class="booth-org">&amp; 성북길빛도서관</span></p>
+          <p class="booth-title">석이네 × 쓰담쓰담 <span class="booth-org">&amp; 석관동미리내도서관</span></p>
           <ul class="booth-desc">
-            <li><span class="time-chip">15:00</span><span class="li-title">폴라로이드 꾸미기</span> — 점자 스티커로 폴라로이드 꾸미기 <span class="note-inline">동덕여자대학교 동아리 북덕</span></li>
-            <li><span class="time-chip">17:00</span><span class="li-title">책, 지구, 사람을 향하는 메시지 실크스크린 찍기 <span class="note-inline">제로웨이스트샵 일상공감</span></li>
+            <li><span class="li-title">읽고, 줍고 함께 만드는 동네</span></li>
+            <li><span class="time-chip">15:00</span><span class="li-title">동낵: 동네스낵 <span class="note-inline">석이네</span></span> — 동네에서 수거한 쓰레기를 스낵으로 교환해주는 환경 캠페인</li>
+            <li><span class="time-chip">17:00</span><span class="li-title">다온책방 <span class="note-inline">쓰담쓰담</span></span> — 성북구 역대 한 책 전시 및 체험</li>
           </ul>
         </div>
       </div>
@@ -506,11 +512,9 @@
       <div class="booth-card" id="b15">
         <div class="booth-num">15</div>
         <div class="booth-body">
-          <p class="booth-title">글빛클라우드 <span class="booth-org">&amp; 글빛·서경로꿈마루도서관</span></p>
+          <p class="booth-title">달빛청년넷 <span class="booth-org">&amp; 달빛마루도서관</span></p>
           <ul class="booth-desc">
-            <li><span class="li-title">놀면서 알아보는 ICT</span></li>
-            <li><span class="li-title">Play1.</span>알파고 AI와 함께하는 오목 한 판!</li>
-            <li><span class="li-title">Play2.</span> 놀면서 배우는 레트로 코딩!</li>
+            <li><span class="li-title">미니 아카이브 꾸미기<br></span>작은 아카이브 꾸러미 만들기, 대형 마을지도에 스탬프·스티커로 동네 이야기 꾸미기</li>
           </ul>
         </div>
       </div>
