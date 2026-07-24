@@ -52,14 +52,13 @@
   }
   .hero .deco-pinkstar{ top:6%; right:8%; width:clamp(38px,6vw,64px); transform:rotate(8deg); }
   .hero .deco-ministar{ top:12%; left:6%; width:clamp(34px,5.5vw,58px); transform:rotate(-10deg); }
-  .hero .deco-coffeecup{ bottom:1%; right:3%; width:clamp(64px,10vw,116px); transform:rotate(9deg); opacity:.92; }
   .hero-content{ position:relative; z-index:2; }
 
   /* 추가 흩뿌림 요소 (deco2) */
   .deco2{ position:absolute; pointer-events:none; user-select:none; z-index:1; opacity:.85; }
   .hero .deco2-star-orange{ top:32%; left:3%; width:clamp(26px,4vw,42px); transform:rotate(-16deg); }
   .hero .deco2-leaf-yellow{ top:8%; left:38%; width:clamp(22px,3.4vw,36px); transform:rotate(20deg); opacity:.7; }
-  .hero .deco2-leaf-yellow-b{ top:44%; right:14%; width:clamp(18px,2.8vw,28px); transform:rotate(-24deg); opacity:.6; }
+  .hero .deco2-leaf-yellow-b{ top:56%; right:2%; width:clamp(18px,2.8vw,28px); transform:rotate(-24deg); opacity:.6; }
 
   #timeline .deco2-star-pink2{ top:10%; left:5%; width:clamp(28px,4.5vw,46px); transform:rotate(-8deg); }
   #timeline .deco2-note-green{ top:34%; right:14%; width:clamp(18px,2.8vw,28px); transform:rotate(10deg); }
@@ -79,6 +78,12 @@
   #layout .deco2-acorn{ top:4%; right:3%; width:clamp(26px,4vw,42px); transform:rotate(10deg); opacity:.75; }
   #layout .deco2-leaf-orange{ bottom:3%; left:2%; width:clamp(30px,4.6vw,48px); transform:rotate(-14deg); opacity:.7; }
   #layout .deco2-leaf-yellow-f{ top:10%; left:6%; width:clamp(18px,2.8vw,28px); transform:rotate(-16deg); opacity:.6; }
+  #layout .deco-paperplane-access{
+    top:58%; right:2%;
+    width:clamp(44px,7vw,72px);
+    transform: scaleX(-1) rotate(-12deg);
+    opacity:.9;
+  }
 
   footer .deco2-leaf-yellow2{ top:12%; right:6%; width:clamp(24px,3.6vw,38px); transform:rotate(-10deg); opacity:.55; }
   footer .deco2-leaf-yellow-g{ bottom:14%; left:12%; width:clamp(18px,2.8vw,26px); transform:rotate(12deg); opacity:.45; }
@@ -87,8 +92,9 @@
   .block-label-row .deco-inline{
     position:static; display:inline-block;
   }
-  .block-label-row .deco2-lamp-inline{
-    width:clamp(38px,5.8vw,58px); transform:rotate(-13deg); opacity:.95; margin-left:auto;
+  .event-note .deco2-lamp-inline{
+    display:inline-block; vertical-align:middle; margin-left:.4rem;
+    width:clamp(20px,3.2vw,30px); transform:rotate(-13deg); opacity:.9;
   }
 
   .hero-title-img{
@@ -287,13 +293,12 @@
     text-align:center; padding:3rem 6vw; font-size:.85rem; line-height:1.9; overflow:hidden;
   }
   footer .footer-inner{ position:relative; z-index:2; }
-  footer .deco-paperplane{ top:8%; left:0%; width:clamp(46px,7vw,78px); transform:rotate(-14deg); opacity:.9; }
   footer .name{ font-weight:800; font-size:1.15rem; margin-bottom:.4rem; color:var(--footer-accent); }
 
   @media (max-width:480px){
     .menu-btn{ padding:.8rem 1.2rem; font-size:.85rem; }
     .facts{ padding:1.1rem 1.3rem; }
-    .hero .deco-flower, .hero .deco-coffeecup{ width:60px; }
+    .hero .deco-flower,
     .booth-card{ padding:1.1rem 1rem; gap:.7rem; }
     .event-step{ flex-basis:100%; }
     .step-arrow{ transform:rotate(90deg); margin:0 auto; }
@@ -330,7 +335,6 @@
   <section class="hero" id="top">
     <img class="deco deco-pinkstar" src="images/deco/pinkstar.png" alt="" aria-hidden="true">
     <img class="deco deco-ministar" src="images/deco/ministar.png" alt="" aria-hidden="true">
-    <img class="deco deco-coffeecup" src="images/deco/coffeecup.png" alt="" aria-hidden="true">
     <img class="deco2 deco2-star-orange" src="images/deco2/star-orange.png" alt="" aria-hidden="true">
     <img class="deco2 deco2-leaf-yellow" src="images/deco2/leaf-yellow.png" alt="" aria-hidden="true">
     <img class="deco2 deco2-leaf-yellow-b" src="images/deco2/leaf-yellow.png" alt="" aria-hidden="true">
@@ -646,10 +650,9 @@
     <div class="block-inner">
       <div class="block-label-row">
         <h2 class="block-label">이벤트</h2>
-        <img class="deco-inline deco2-lamp-inline" src="images/deco2/lamp-blue.png" alt="" aria-hidden="true">
       </div>
       <p class="event-headcopy">발길 닿는 곳마다 손에 남는 즐거움</p>
-      <p class="event-note">※ 이벤트 선물은 한정수량으로 조기 소진될 수 있습니다.</p>
+      <p class="event-note">※ 이벤트 선물은 한정수량으로 조기 소진될 수 있습니다.<img class="deco-inline deco2-lamp-inline" src="images/deco2/lamp-blue.png" alt="" aria-hidden="true"></p>
 
       <div class="event-block">
         <p class="event-title">스탬프랠리</p>
@@ -684,6 +687,7 @@
     <img class="deco2 deco2-acorn" src="images/deco2/acorn.png" alt="" aria-hidden="true">
     <img class="deco2 deco2-leaf-orange" src="images/deco2/leaf-orange.png" alt="" aria-hidden="true">
     <img class="deco2 deco2-leaf-yellow-f" src="images/deco2/leaf-yellow.png" alt="" aria-hidden="true">
+    <img class="deco deco-paperplane-access" src="images/deco/paperplane.png" alt="" aria-hidden="true">
     <div class="block-inner">
       <h2 class="block-label" style="display:block; margin-bottom:1.6rem;">배치도 &middot; 오시는 길</h2>
 
@@ -719,7 +723,6 @@
   </section>
 
   <footer>
-    <img class="deco deco-paperplane" src="images/deco/paperplane.png" alt="" aria-hidden="true">
     <img class="deco2 deco2-leaf-yellow2" src="images/deco2/leaf-yellow.png" alt="" aria-hidden="true">
     <img class="deco2 deco2-leaf-yellow-g" src="images/deco2/leaf-yellow.png" alt="" aria-hidden="true">
     <div class="footer-inner">
